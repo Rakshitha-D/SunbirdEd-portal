@@ -6,7 +6,7 @@ on:
       - '*'
 
 env:
-  NODE_VERSION: '18.20.*'
+  NODE_VERSION: '22.21.1'
   PYTHON: /usr/bin/python3.7
   BUILD_CDN_ASSETS: ${{ vars.BUILD_CDN_ASSETS || 'false' }}
   CDN_URL: ${{ secrets.CDN_URL }}
