@@ -21,9 +21,10 @@ import { ContentManagerService } from '../../../public/module/offline/services';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-collection-player',
-  templateUrl: './collection-player.component.html',
-  styleUrls: ['./collection-player.component.scss']
+    selector: 'app-collection-player',
+    templateUrl: './collection-player.component.html',
+    styleUrls: ['./collection-player.component.scss'],
+    standalone: false
 })
 export class CollectionPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   telemetryImpression: IImpressionEventInput;

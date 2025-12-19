@@ -9,9 +9,10 @@ const OFFLINE_ARTIFACT_MIME_TYPES = ['application/epub', 'video/webm', 'video/mp
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 @Component({
-  selector: 'app-content-player',
-  templateUrl: './content-player.component.html',
-  styleUrls: ['./content-player.component.scss']
+    selector: 'app-content-player',
+    templateUrl: './content-player.component.html',
+    styleUrls: ['./content-player.component.scss'],
+    standalone: false
 })
 export class ContentPlayerComponent implements AfterViewInit, OnChanges, OnInit, OnDestroy {
   @Input() playerConfig: PlayerConfig;

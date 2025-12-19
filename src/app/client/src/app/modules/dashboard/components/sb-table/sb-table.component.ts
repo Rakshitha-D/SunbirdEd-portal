@@ -2,9 +2,10 @@ import { Component, Input, AfterViewInit, ChangeDetectorRef, ViewChild } from '@
 import { ResourceService } from '@sunbird/shared';
 
 @Component({
-  selector: 'app-sb-table',
-  templateUrl: './sb-table.component.html',
-  styleUrls: ['./sb-table.component.scss']
+    selector: 'app-sb-table',
+    templateUrl: './sb-table.component.html',
+    styleUrls: ['./sb-table.component.scss'],
+    standalone: false
 })
 export class SbTableComponent implements AfterViewInit  {
   @Input() rowsData: any;

@@ -2,9 +2,10 @@ import { Component, OnInit, OnDestroy, OnChanges, Input, EventEmitter, Output } 
 
 
 @Component({
-  selector: 'app-content-chapterlist',
-  templateUrl: './content-chapterlist.component.html',
-  styleUrls: ['./content-chapterlist.component.scss']
+    selector: 'app-content-chapterlist',
+    templateUrl: './content-chapterlist.component.html',
+    styleUrls: ['./content-chapterlist.component.scss'],
+    standalone: false
 })
 export class ContentChapterlistComponent implements OnInit, OnDestroy, OnChanges {
   @Input() contentDetails;

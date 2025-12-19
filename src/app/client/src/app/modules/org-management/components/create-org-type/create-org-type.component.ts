@@ -14,8 +14,9 @@ import { takeUntil } from 'rxjs/operators';
  * It also creates and updates organisation type.
  */
 @Component({
-  selector: 'app-create-org-type',
-  templateUrl: './create-org-type.component.html'
+    selector: 'app-create-org-type',
+    templateUrl: './create-org-type.component.html',
+    standalone: false
 })
 export class CreateOrgTypeComponent implements OnInit, OnDestroy, AfterViewInit {
   public addOrganizationType: IInteractEventEdata;

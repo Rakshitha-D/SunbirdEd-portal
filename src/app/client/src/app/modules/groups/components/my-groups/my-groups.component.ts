@@ -11,9 +11,10 @@ import { IImpressionEventInput } from '@sunbird/telemetry';
 import { CsGroupSearchCriteria } from '@project-sunbird/client-services/services/group/interface';
 import { SELECT_CREATE_GROUP, PAGE_LOADED, SELECT_GROUP } from '../../interfaces/telemetryConstants';
 @Component({
-  selector: 'app-my-groups',
-  templateUrl: './my-groups.component.html',
-  styleUrls: ['./my-groups.component.scss']
+    selector: 'app-my-groups',
+    templateUrl: './my-groups.component.html',
+    styleUrls: ['./my-groups.component.scss'],
+    standalone: false
 })
 export class MyGroupsComponent implements OnInit, OnDestroy {
   showGroupCreateForm = false;

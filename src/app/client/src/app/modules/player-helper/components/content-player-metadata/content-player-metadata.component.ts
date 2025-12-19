@@ -4,9 +4,10 @@ import { ContentData, ResourceService } from '@sunbird/shared';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-content-player-metadata',
-  templateUrl: './content-player-metadata.component.html',
-  styleUrls: ['./content-player-metadata.component.scss']
+    selector: 'app-content-player-metadata',
+    templateUrl: './content-player-metadata.component.html',
+    styleUrls: ['./content-player-metadata.component.scss'],
+    standalone: false
 })
 export class ContentPlayerMetadataComponent implements OnInit {
   readMore = false;

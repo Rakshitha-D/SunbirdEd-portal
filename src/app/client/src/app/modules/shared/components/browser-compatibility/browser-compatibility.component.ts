@@ -2,9 +2,10 @@ import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { ResourceService } from '../../services/index';
 @Component({
-  selector: 'app-browser-compatibility',
-  templateUrl: './browser-compatibility.component.html',
-  styleUrls: ['./browser-compatibility.component.scss']
+    selector: 'app-browser-compatibility',
+    templateUrl: './browser-compatibility.component.html',
+    styleUrls: ['./browser-compatibility.component.scss'],
+    standalone: false
 })
 export class BrowserCompatibilityComponent implements OnInit {
   @ViewChild('modal') modal;

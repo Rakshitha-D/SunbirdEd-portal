@@ -5,8 +5,9 @@ import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-comming-soon',
-  templateUrl: './comming-soon.component.html'
+    selector: 'app-comming-soon',
+    templateUrl: './comming-soon.component.html',
+    standalone: false
 })
 
 export class CommingSoonComponent implements OnInit, OnDestroy {

@@ -10,7 +10,8 @@ import { get } from 'lodash-es';
 import { GenericResourceService } from '../../services/genericResource/genericResource.service';
 
 @Pipe({
-  name: 'transposeTerms'
+    name: 'transposeTerms',
+    standalone: false
 })
 
 export class TransposeTermsPipe implements PipeTransform {

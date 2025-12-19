@@ -7,9 +7,10 @@ import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms
 
 
 @Component({
-  selector: 'browse-image-popup',
-  templateUrl: './browse-image-popup.component.html',
-  styleUrls: ['./browse-image-popup.component.scss']
+    selector: 'browse-image-popup',
+    templateUrl: './browse-image-popup.component.html',
+    styleUrls: ['./browse-image-popup.component.scss'],
+    standalone: false
 })
 export class BrowseImagePopupComponent implements OnInit {
 

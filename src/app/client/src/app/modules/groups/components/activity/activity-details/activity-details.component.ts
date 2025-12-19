@@ -11,9 +11,10 @@ import { IActivity } from '../activity-list/activity-list.component';
 import { PublicPlayerService } from '@sunbird/public';
 import { ACTIVITY_DASHBOARD, MY_GROUPS, GROUP_DETAILS } from '../../../interfaces/routerLinks';
 @Component({
-  selector: 'app-activity-details',
-  templateUrl: './activity-details.component.html',
-  styleUrls: ['./activity-details.component.scss']
+    selector: 'app-activity-details',
+    templateUrl: './activity-details.component.html',
+    styleUrls: ['./activity-details.component.scss'],
+    standalone: false
 })
 export class ActivityDetailsComponent implements OnInit, OnDestroy {
 

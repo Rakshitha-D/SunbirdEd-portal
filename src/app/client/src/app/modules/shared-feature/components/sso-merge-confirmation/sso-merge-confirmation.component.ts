@@ -5,9 +5,10 @@ import {TenantService} from '@sunbird/core';
 
 
 @Component({
-  selector: 'app-sso-merge-confirmation',
-  templateUrl: './sso-merge-confirmation.component.html',
-  styleUrls: ['./sso-merge-confirmation.component.scss']
+    selector: 'app-sso-merge-confirmation',
+    templateUrl: './sso-merge-confirmation.component.html',
+    styleUrls: ['./sso-merge-confirmation.component.scss'],
+    standalone: false
 })
 export class SsoMergeConfirmationComponent implements OnInit, OnDestroy {
   @Input() userDetails: any;

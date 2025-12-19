@@ -15,8 +15,9 @@ import { IImpressionEventInput } from '@sunbird/telemetry';
  * The flagged submission  component
 */
 @Component({
-  selector: 'app-flagged',
-  templateUrl: './flagged.component.html'
+    selector: 'app-flagged',
+    templateUrl: './flagged.component.html',
+    standalone: false
 })
 export class FlaggedComponent extends WorkSpace implements OnInit, AfterViewInit {
   /**

@@ -6,9 +6,10 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 import * as _ from 'lodash-es';
 
 @Component({
-  selector: 'app-offline-application-download',
-  templateUrl: './offline-application-download.component.html',
-  styleUrls: ['./offline-application-download.component.scss']
+    selector: 'app-offline-application-download',
+    templateUrl: './offline-application-download.component.html',
+    styleUrls: ['./offline-application-download.component.scss'],
+    standalone: false
 })
 export class OfflineApplicationDownloadComponent implements OnInit, AfterViewInit {
 

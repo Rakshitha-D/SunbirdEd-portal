@@ -16,9 +16,10 @@ import { ChangeDetectorRef } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-report-view',
-  templateUrl: './report-view.component.html',
-  styleUrls: ['./report-view.component.scss'],
+    selector: 'app-report-view',
+    templateUrl: './report-view.component.html',
+    styleUrls: ['./report-view.component.scss'],
+    standalone: false
 })
 export class ReportViewComponent implements OnInit {
   state: any = {};

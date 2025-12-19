@@ -15,9 +15,10 @@ export enum Stage {
 }
 
 @Component({
-  selector: 'app-user-onboarding',
-  templateUrl: './user-onboarding.component.html',
-  styleUrls: ['./user-onboarding.component.scss']
+    selector: 'app-user-onboarding',
+    templateUrl: './user-onboarding.component.html',
+    styleUrls: ['./user-onboarding.component.scss'],
+    standalone: false
 })
 export class UserOnboardingComponent implements OnInit {
 

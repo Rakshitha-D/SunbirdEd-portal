@@ -6,9 +6,10 @@ import { Subject, of} from 'rxjs';
 import { debounceTime, distinctUntilChanged, delay, flatMap } from 'rxjs/operators';
 import { IInteractEventEdata, IInteractEventInput, IInteractEventObject, IProducerData, TelemetryService } from '@sunbird/telemetry';
 @Component({
-  selector: 'app-collaboration-content-filter',
-  templateUrl: './collaboration-content-filter.component.html',
-  styleUrls: ['./collaboration-content-filter.component.scss']
+    selector: 'app-collaboration-content-filter',
+    templateUrl: './collaboration-content-filter.component.html',
+    styleUrls: ['./collaboration-content-filter.component.scss'],
+    standalone: false
 })
 export class CollaborationContentFilterComponent implements OnInit {
   modelChanged: Subject<string> = new Subject<string>();

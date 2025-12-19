@@ -5,7 +5,8 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 @Directive({
-  selector: '[appOnlineOnly]'
+    selector: '[appOnlineOnly]',
+    standalone: false
 })
 export class OnlineOnlyDirective implements OnInit, OnDestroy {
   @Input() showWarningMessage = false;

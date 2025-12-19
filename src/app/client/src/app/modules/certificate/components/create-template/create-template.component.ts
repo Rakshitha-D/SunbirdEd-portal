@@ -11,9 +11,10 @@ import { BrowseImagePopupComponent } from '../browse-image-popup/browse-image-po
 import {ActivatedRoute} from '@angular/router';
 import dayjs from 'dayjs';
 @Component({
-  selector: 'app-create-template',
-  templateUrl: './create-template.component.html',
-  styleUrls: ['./create-template.component.scss']
+    selector: 'app-create-template',
+    templateUrl: './create-template.component.html',
+    styleUrls: ['./create-template.component.scss'],
+    standalone: false
 })
 export class CreateTemplateComponent implements OnInit, OnDestroy {
 

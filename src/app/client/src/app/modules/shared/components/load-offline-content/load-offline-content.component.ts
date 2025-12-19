@@ -7,9 +7,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 import * as _ from 'lodash-es';
 import { IInteractEventEdata } from '@sunbird/telemetry';
 @Component({
-  selector: 'app-load-offline-content',
-  templateUrl: './load-offline-content.component.html',
-  styleUrls: ['./load-offline-content.component.scss']
+    selector: 'app-load-offline-content',
+    templateUrl: './load-offline-content.component.html',
+    styleUrls: ['./load-offline-content.component.scss'],
+    standalone: false
 })
 export class LoadOfflineContentComponent implements OnInit, OnDestroy  {
   @Input() hideLoadButton = false;

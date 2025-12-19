@@ -14,9 +14,10 @@ import { AssessmentInfo, Evidence, IAssessmentDetails, Section, SlQuestionnaireS
 import { QuestionnaireService } from '../questionnaire.service';
 
 @Component({
-  selector: 'app-questionnaire',
-  templateUrl: './questionnaire.component.html',
-  styleUrls: ['./questionnaire.component.scss'],
+    selector: 'app-questionnaire',
+    templateUrl: './questionnaire.component.html',
+    styleUrls: ['./questionnaire.component.scss'],
+    standalone: false
 })
 export class QuestionnaireComponent
   extends ComponentDeactivate

@@ -12,9 +12,10 @@ import { PublicPlayerService } from '@sunbird/public';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-contentplayer-page',
-  templateUrl: './contentplayer-page.component.html',
-  styleUrls: ['./contentplayer-page.component.scss']
+    selector: 'app-contentplayer-page',
+    templateUrl: './contentplayer-page.component.html',
+    styleUrls: ['./contentplayer-page.component.scss'],
+    standalone: false
 })
 export class ContentPlayerPageComponent implements OnInit, OnDestroy, OnChanges {
   @Input() contentDetails;

@@ -4,9 +4,10 @@ import { ResourceService } from './../../services';
 import * as _ from 'lodash-es';
 
 @Component({
-  selector: 'app-offline-banner',
-  templateUrl: './offline-banner.component.html',
-  styleUrls: ['./offline-banner.component.scss']
+    selector: 'app-offline-banner',
+    templateUrl: './offline-banner.component.html',
+    styleUrls: ['./offline-banner.component.scss'],
+    standalone: false
 })
 export class OfflineBannerComponent implements OnInit {
 

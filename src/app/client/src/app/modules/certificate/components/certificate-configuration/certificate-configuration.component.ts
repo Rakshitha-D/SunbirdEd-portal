@@ -18,9 +18,10 @@ export interface IConfigLabels {
 }
 
 @Component({
-  selector: 'app-certificate-configuration',
-  templateUrl: './certificate-configuration.component.html',
-  styleUrls: ['./certificate-configuration.component.scss']
+    selector: 'app-certificate-configuration',
+    templateUrl: './certificate-configuration.component.html',
+    styleUrls: ['./certificate-configuration.component.scss'],
+    standalone: false
 })
 export class CertificateConfigurationComponent implements OnInit, OnDestroy {
   @ViewChild('selectCertType') selectCertType;

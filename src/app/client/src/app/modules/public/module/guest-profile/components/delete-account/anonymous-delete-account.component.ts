@@ -9,9 +9,10 @@ import { MatDialog } from '@angular/material/dialog';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
-  selector: 'app-anonymous-delete-account',
-  templateUrl: './anonymous-delete-account.component.html',
-  styleUrls: ['./anonymous-delete-account.component.scss']
+    selector: 'app-anonymous-delete-account',
+    templateUrl: './anonymous-delete-account.component.html',
+    styleUrls: ['./anonymous-delete-account.component.scss'],
+    standalone: false
 })
 export class AnonymousDeleteAccountComponent implements OnInit, OnDestroy {
   public unsubscribe = new Subject<void>();

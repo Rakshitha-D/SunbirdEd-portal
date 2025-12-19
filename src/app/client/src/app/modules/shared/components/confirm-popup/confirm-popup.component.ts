@@ -8,9 +8,10 @@ interface InputType {
 }
 
 @Component({
-  selector: 'app-confirm-popup',
-  templateUrl: './confirm-popup.component.html',
-  styleUrls: ['./confirm-popup.component.scss']
+    selector: 'app-confirm-popup',
+    templateUrl: './confirm-popup.component.html',
+    styleUrls: ['./confirm-popup.component.scss'],
+    standalone: false
 })
 export class ConfirmPopupComponent {
 

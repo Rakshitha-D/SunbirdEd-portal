@@ -10,9 +10,10 @@ import {
 import { ResourceService } from '@sunbird/shared';
 
 @Component({
-  selector: 'app-entity-list',
-  templateUrl: './entity-list.component.html',
-  styleUrls: ['./entity-list.component.scss'],
+    selector: 'app-entity-list',
+    templateUrl: './entity-list.component.html',
+    styleUrls: ['./entity-list.component.scss'],
+    standalone: false
 })
 export class EntityListComponent implements OnInit {
   @ViewChild('modal') modal;

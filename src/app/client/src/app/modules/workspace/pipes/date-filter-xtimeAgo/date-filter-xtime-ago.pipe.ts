@@ -8,7 +8,8 @@ dayjs.extend(relativeTime);
  * Pipe for date format
  */
 @Pipe({
-  name: 'fromNow'
+    name: 'fromNow',
+    standalone: false
 })
 export class DateFilterXtimeAgoPipe implements PipeTransform {
   /**

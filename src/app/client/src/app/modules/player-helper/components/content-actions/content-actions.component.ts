@@ -13,9 +13,10 @@ import { takeUntil } from 'rxjs/operators';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-content-actions',
-  templateUrl: './content-actions.component.html',
-  styleUrls: ['./content-actions.component.scss']
+    selector: 'app-content-actions',
+    templateUrl: './content-actions.component.html',
+    styleUrls: ['./content-actions.component.scss'],
+    standalone: false
 })
 export class ContentActionsComponent implements OnInit, OnChanges, OnDestroy {
   @Input() contentData;

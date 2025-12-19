@@ -16,8 +16,9 @@ import { CsLibInitializerService } from '../../../../../service/CsLibInitializer
 import { DiscussionService } from '../../../../../../app/modules/discussion/services/discussion/discussion.service';
 
 @Component({
-  selector: 'app-create-batch',
-  templateUrl: './create-batch.component.html'
+    selector: 'app-create-batch',
+    templateUrl: './create-batch.component.html',
+    standalone: false
 })
 export class CreateBatchComponent implements OnInit, OnDestroy, AfterViewInit {
 

@@ -11,9 +11,10 @@ import { GroupsService } from '../../services';
 import { ADD_MEMBER } from '../../interfaces/telemetryConstants';
 
 @Component({
-  selector: 'app-group-members',
-  templateUrl: './group-members.component.html',
-  styleUrls: ['./group-members.component.scss']
+    selector: 'app-group-members',
+    templateUrl: './group-members.component.html',
+    styleUrls: ['./group-members.component.scss'],
+    standalone: false
 })
 export class GroupMembersComponent implements OnInit, OnDestroy {
   @ViewChild('searchInputBox') searchInputBox: ElementRef;

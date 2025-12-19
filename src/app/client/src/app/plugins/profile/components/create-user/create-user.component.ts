@@ -1,6 +1,6 @@
 import { Component, OnInit, SecurityContext } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import {InterpolatePipe, ResourceService, ToasterService, ServerResponse, UtilService, NavigationHelperService, LayoutService } from '@sunbird/shared';
+import { InterpolatePipe, ResourceService, ToasterService, ServerResponse, UtilService, NavigationHelperService, LayoutService } from '@sunbird/shared';
 import { ProfileService } from './../../services';
 import { UntypedFormBuilder, Validators, UntypedFormGroup, UntypedFormControl } from '@angular/forms';
 import * as _ from 'lodash-es';
@@ -22,7 +22,8 @@ import { Subject } from 'rxjs';
 @Component({
   selector: 'app-create-user',
   templateUrl: './create-user.component.html',
-  styleUrls: ['./create-user.component.scss']
+  styleUrls: ['./create-user.component.scss'],
+  standalone: false
 })
 export class CreateUserComponent implements OnInit {
 
@@ -36,7 +37,7 @@ export class CreateUserComponent implements OnInit {
   submitInteractEdata: IInteractEventEdata;
   submitCancelInteractEdata: IInteractEventEdata;
   layoutConfiguration: any;
-  
+
 
   public unsubscribe = new Subject<void>();
   pageId = 'create-managed-user';
@@ -150,7 +151,7 @@ export class CreateUserComponent implements OnInit {
 
   onSubmitForm() {
     this.enableSubmitBtn = false;
-    this.userDetailsForm.value.name = _.trim(this._sanitizer.sanitize(SecurityContext.HTML,this.userDetailsForm.value.name));
+    this.userDetailsForm.value.name = _.trim(this._sanitizer.sanitize(SecurityContext.HTML, this.userDetailsForm.value.name));
     if (this.userDetailsForm.value.name !== '' && this.userDetailsForm.value.name !== null) {
       const createUserRequest = {
         request: {
@@ -174,28 +175,28 @@ export class CreateUserComponent implements OnInit {
 
   registerUser(createUserRequest, userProfileData) {
     this.userService.registerUser(createUserRequest).subscribe((resp: ServerResponse) => {
-        this.managedUserService.updateUserList({
-          firstName: this.userDetailsForm.controls?.name.value,
-          identifier: _.get(resp, 'result.userId'),
-          id: _.get(resp, 'result.userId'),
-          managedBy: this.managedUserService.getUserId()
-        });
-        const filterPipe = new InterpolatePipe();
-        const successMessage = filterPipe.transform(_.get(this.resourceService, 'messages.imsg.m0096'),
-          '{firstName}', this.userDetailsForm.controls?.name.value);
-        this.toasterService.custom({
-          message: successMessage,
-          class: 'sb-toaster sb-toast-success sb-toast-normal'
-        });
-        this.router.navigate(['/profile/choose-managed-user']);
-      }, (err) => {
-        if (_.get(err, 'error.params.status') === 'MANAGED_USER_LIMIT_EXCEEDED') {
-          this.toasterService.error(_.get(this.resourceService, 'messages.fmsg.m0100'));
-        } else {
-          this.toasterService.error(this.resourceService.messages.fmsg.m0085);
-        }
-        this.enableSubmitBtn = true;
+      this.managedUserService.updateUserList({
+        firstName: this.userDetailsForm.controls?.name.value,
+        identifier: _.get(resp, 'result.userId'),
+        id: _.get(resp, 'result.userId'),
+        managedBy: this.managedUserService.getUserId()
+      });
+      const filterPipe = new InterpolatePipe();
+      const successMessage = filterPipe.transform(_.get(this.resourceService, 'messages.imsg.m0096'),
+        '{firstName}', this.userDetailsForm.controls?.name.value);
+      this.toasterService.custom({
+        message: successMessage,
+        class: 'sb-toaster sb-toast-success sb-toast-normal'
+      });
+      this.router.navigate(['/profile/choose-managed-user']);
+    }, (err) => {
+      if (_.get(err, 'error.params.status') === 'MANAGED_USER_LIMIT_EXCEEDED') {
+        this.toasterService.error(_.get(this.resourceService, 'messages.fmsg.m0100'));
+      } else {
+        this.toasterService.error(this.resourceService.messages.fmsg.m0085);
       }
+      this.enableSubmitBtn = true;
+    }
     );
   }
 }

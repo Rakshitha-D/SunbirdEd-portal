@@ -9,9 +9,10 @@ import { Router } from '@angular/router';
 import { PopupControlService } from '../../../../service/popup-control.service';
 
 @Component({
-  selector: 'app-validate-teacher-identifier-popup',
-  templateUrl: './validate-teacher-identifier-popup.component.html',
-  styleUrls: ['./validate-teacher-identifier-popup.component.scss']
+    selector: 'app-validate-teacher-identifier-popup',
+    templateUrl: './validate-teacher-identifier-popup.component.html',
+    styleUrls: ['./validate-teacher-identifier-popup.component.scss'],
+    standalone: false
 })
 export class ValidateTeacherIdentifierPopupComponent implements OnInit, OnDestroy {
   @Input() userFeedData: {};

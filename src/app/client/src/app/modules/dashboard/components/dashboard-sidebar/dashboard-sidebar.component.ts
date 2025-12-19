@@ -6,9 +6,10 @@ import { ResourceService } from '@sunbird/shared';
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash-es';
 @Component({
-  selector: 'app-dashboard-sidebar',
-  templateUrl: './dashboard-sidebar.component.html',
-  styleUrls: ['./dashboard-sidebar.component.scss']
+    selector: 'app-dashboard-sidebar',
+    templateUrl: './dashboard-sidebar.component.html',
+    styleUrls: ['./dashboard-sidebar.component.scss'],
+    standalone: false
 })
 export class DashboardSidebarComponent implements OnInit {
 

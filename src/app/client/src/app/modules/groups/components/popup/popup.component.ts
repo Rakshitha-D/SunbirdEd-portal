@@ -9,9 +9,10 @@ import { NavigationHelperService } from '@sunbird/shared';
 import { DELETE_POPUP, POP_DEACTIVATE } from '../../interfaces/telemetryConstants';
 import { MatDialog } from '@angular/material/dialog';
 @Component({
-  selector: 'app-modal',
-  templateUrl: './popup.component.html',
-  styleUrls: ['./popup.component.scss']
+    selector: 'app-modal',
+    templateUrl: './popup.component.html',
+    styleUrls: ['./popup.component.scss'],
+    standalone: false
 })
 export class PopupComponent implements AfterViewInit {
 

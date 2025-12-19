@@ -9,9 +9,10 @@ import { ILogEventInput, TelemetryService } from '@sunbird/telemetry';
 import { UserService } from '../../../../../core/services/user/user.service';
 
 @Component({
-  selector: 'app-content-manager',
-  templateUrl: './content-manager.component.html',
-  styleUrls: ['./content-manager.component.scss']
+    selector: 'app-content-manager',
+    templateUrl: './content-manager.component.html',
+    styleUrls: ['./content-manager.component.scss'],
+    standalone: false
 })
 export class ContentManagerComponent implements OnInit, OnDestroy {
 

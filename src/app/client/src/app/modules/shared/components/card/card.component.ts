@@ -4,8 +4,9 @@ import { ICard } from '../../interfaces';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html'
+    selector: 'app-card',
+    templateUrl: './card.component.html',
+    standalone: false
 })
 export class CardComponent {
   /**

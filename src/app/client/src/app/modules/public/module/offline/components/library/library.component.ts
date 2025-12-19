@@ -15,7 +15,8 @@ import { CslFrameworkService } from '../../../../services/csl-framework/csl-fram
 @Component({
     selector: 'app-library',
     templateUrl: './library.component.html',
-    styleUrls: ['./library.component.scss']
+    styleUrls: ['./library.component.scss'],
+    standalone: false
 })
 export class LibraryComponent implements OnInit, OnDestroy {
 

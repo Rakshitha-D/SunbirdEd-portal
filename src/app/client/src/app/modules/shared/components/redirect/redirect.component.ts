@@ -5,8 +5,9 @@ import { IImpressionEventInput } from '@sunbird/telemetry';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-redirect',
-  templateUrl: './redirect.component.html'
+    selector: 'app-redirect',
+    templateUrl: './redirect.component.html',
+    standalone: false
 })
 
 /**

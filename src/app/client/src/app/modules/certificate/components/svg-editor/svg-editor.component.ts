@@ -17,9 +17,10 @@ import { BrowseImagePopupComponent } from '../browse-image-popup/browse-image-po
 import {ActivatedRoute} from '@angular/router';
 import dayjs from 'dayjs';
 @Component({
-  selector: 'app-svg-editor',
-  templateUrl: './svg-editor.component.html',
-  styleUrls: ['./svg-editor.component.scss']
+    selector: 'app-svg-editor',
+    templateUrl: './svg-editor.component.html',
+    styleUrls: ['./svg-editor.component.scss'],
+    standalone: false
 })
 export class SvgEditorComponent implements OnInit, OnDestroy {
 

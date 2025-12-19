@@ -14,8 +14,9 @@ import { SuiModalService } from '@project-sunbird/ng2-semantic-ui';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-collaborating-on',
-  templateUrl: './collaborating-on.component.html'
+    selector: 'app-collaborating-on',
+    templateUrl: './collaborating-on.component.html',
+    standalone: false
 })
 export class CollaboratingOnComponent extends WorkSpace implements OnInit, AfterViewInit {
   /**

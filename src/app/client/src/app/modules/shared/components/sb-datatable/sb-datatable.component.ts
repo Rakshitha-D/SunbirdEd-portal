@@ -31,9 +31,10 @@ export const multiFilter = (arr: Object[], filters: Object) => {
 };
 
 @Component({
-  selector: 'sb-datatable',
-  templateUrl: './sb-datatable.component.html',
-  styleUrls: ['./sb-datatable.component.scss']
+    selector: 'sb-datatable',
+    templateUrl: './sb-datatable.component.html',
+    styleUrls: ['./sb-datatable.component.scss'],
+    standalone: false
 })
 export class SbDatatableComponent implements OnInit, OnChanges {
 

@@ -10,9 +10,10 @@ import { IInteractEventObject, IInteractEventEdata } from '@sunbird/telemetry';
 import { takeUntil } from 'rxjs/operators';
 import { Subject} from 'rxjs';
 @Component({
-  selector: 'app-upforreview-contentplayer',
-  templateUrl: './upforreview-contentplayer.component.html',
-  styleUrls: ['./upforreview-contentplayer.component.scss']
+    selector: 'app-upforreview-contentplayer',
+    templateUrl: './upforreview-contentplayer.component.html',
+    styleUrls: ['./upforreview-contentplayer.component.scss'],
+    standalone: false
 })
 export class UpforreviewContentplayerComponent implements OnInit, OnDestroy {
   public requestForChangesInteractEdata: IInteractEventEdata;

@@ -9,9 +9,10 @@ import { CsLibInitializerService } from '../../../../service/CsLibInitializer/cs
 import { CsModule } from '@project-sunbird/client-services';
 
 @Component({
-  selector: 'app-access-discussion',
-  templateUrl: './access-discussion.component.html',
-  styleUrls: ['./access-discussion.component.scss']
+    selector: 'app-access-discussion',
+    templateUrl: './access-discussion.component.html',
+    styleUrls: ['./access-discussion.component.scss'],
+    standalone: false
 })
 
 export class AccessDiscussionComponent implements OnInit {

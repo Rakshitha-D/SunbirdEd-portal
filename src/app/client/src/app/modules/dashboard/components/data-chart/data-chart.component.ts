@@ -19,9 +19,10 @@ import { IBigNumberChart } from '../../interfaces/chartData';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-data-chart',
-  templateUrl: './data-chart.component.html',
-  styleUrls: ['./data-chart.component.scss']
+    selector: 'app-data-chart',
+    templateUrl: './data-chart.component.html',
+    styleUrls: ['./data-chart.component.scss'],
+    standalone: false
 })
 export class DataChartComponent implements OnInit, OnDestroy {
 

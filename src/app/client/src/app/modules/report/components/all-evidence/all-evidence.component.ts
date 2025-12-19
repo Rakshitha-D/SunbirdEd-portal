@@ -12,9 +12,10 @@ import { LocationStrategy } from '@angular/common';
 import { MatTabChangeEvent } from '@angular/material/tabs';
 
 @Component({
-  selector: 'app-all-evidence',
-  templateUrl: './all-evidence.component.html',
-  styleUrls: ['./all-evidence.component.scss'],
+    selector: 'app-all-evidence',
+    templateUrl: './all-evidence.component.html',
+    styleUrls: ['./all-evidence.component.scss'],
+    standalone: false
 })
 export class AllEvidenceComponent implements OnInit {
   @ViewChild('modal') modal;

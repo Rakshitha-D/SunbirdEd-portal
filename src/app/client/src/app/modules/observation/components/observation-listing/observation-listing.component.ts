@@ -45,9 +45,10 @@ import {Location} from '@angular/common';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-observation-listing',
-  templateUrl: './observation-listing.component.html',
-  styleUrls: ['./observation-listing.component.scss'],
+    selector: 'app-observation-listing',
+    templateUrl: './observation-listing.component.html',
+    styleUrls: ['./observation-listing.component.scss'],
+    standalone: false
 })
 export class ObservationListingComponent
   implements OnInit, OnDestroy, AfterViewInit {

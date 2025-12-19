@@ -11,8 +11,9 @@ import { IImpressionEventInput, IInteractEventEdata } from '@sunbird/telemetry';
  * that has been added by the user having system adminstartion role
  */
 @Component({
-  selector: 'app-view-org-type',
-  templateUrl: './view-org-type.component.html'
+    selector: 'app-view-org-type',
+    templateUrl: './view-org-type.component.html',
+    standalone: false
 })
 export class ViewOrgTypeComponent implements OnInit, OnDestroy, AfterViewInit {
   public addOrganizationType: IInteractEventEdata;

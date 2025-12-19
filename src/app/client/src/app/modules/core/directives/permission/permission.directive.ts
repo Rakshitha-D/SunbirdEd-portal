@@ -5,7 +5,8 @@ import { Directive, ElementRef, Input, OnInit} from '@angular/core';
  * Permission validator Directive
  */
 @Directive({
-  selector: '[appPermission]'
+    selector: '[appPermission]',
+    standalone: false
 })
 export class PermissionDirective implements OnInit {
 

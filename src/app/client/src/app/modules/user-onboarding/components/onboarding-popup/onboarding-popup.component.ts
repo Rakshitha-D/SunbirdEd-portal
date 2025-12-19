@@ -12,12 +12,13 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { onboardingScreenType } from '../../components/onboarding-popup/onboarding-popup.component.models'
 
 @Component({
-  selector: 'app-onboarding-popup',
-  templateUrl: './onboarding-popup.component.html',
-  styleUrls: ['./onboarding-popup.component.scss'],
-  providers: [{
-    provide: STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
-  }]
+    selector: 'app-onboarding-popup',
+    templateUrl: './onboarding-popup.component.html',
+    styleUrls: ['./onboarding-popup.component.scss'],
+    providers: [{
+            provide: STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
+        }],
+    standalone: false
 })
 export class OnboardingPopupComponent implements OnInit {
   @Input() deviceProfile: IDeviceProfile;

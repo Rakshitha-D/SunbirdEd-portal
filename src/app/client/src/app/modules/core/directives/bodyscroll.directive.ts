@@ -1,7 +1,8 @@
 import {Directive, AfterViewInit, OnDestroy} from '@angular/core';
 
 @Directive({
-  selector: '[appBodyScroll]'
+    selector: '[appBodyScroll]',
+    standalone: false
 })
 export class BodyScrollDirective implements AfterViewInit, OnDestroy {
 

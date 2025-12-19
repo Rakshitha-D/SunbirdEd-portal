@@ -3,9 +3,10 @@ import { ResourceService } from '../../services/index';
 import * as _ from 'lodash-es';
 
 @Component({
-  selector: 'app-install-app',
-  templateUrl: './install-app.component.html',
-  styleUrls: ['./install-app.component.scss']
+    selector: 'app-install-app',
+    templateUrl: './install-app.component.html',
+    styleUrls: ['./install-app.component.scss'],
+    standalone: false
 })
 export class InstallAppComponent implements OnInit {
   showPopUp = true;

@@ -17,7 +17,8 @@ interface AdditionalConfig {
 type IMatDialogConfig = MatDialogConfig & AdditionalConfig;
 
 @Directive({
-  selector: '[sbModalContent]'
+    selector: '[sbModalContent]',
+    standalone: false
 })
 export class ModalContentDirective {
   constructor(private templateRef: TemplateRef<any>) { }
@@ -30,8 +31,9 @@ export class ModalContentDirective {
  * @implements {OnInit}
  */
 @Component({
-  selector: 'app-modal-wrapper',
-  template: ''
+    selector: 'app-modal-wrapper',
+    template: '',
+    standalone: false
 })
 export class ModalWrapperComponent implements OnInit, OnDestroy {
 

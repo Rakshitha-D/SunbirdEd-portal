@@ -6,7 +6,8 @@ import { TelemetryService } from '../../services';
  * TelemetryInteract Directive
  */
 @Directive({
-  selector: '[appTelemetryStart]'
+    selector: '[appTelemetryStart]',
+    standalone: false
 })
 export class TelemetryStartDirective implements OnChanges {
   /**

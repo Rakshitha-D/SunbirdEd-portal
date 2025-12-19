@@ -8,8 +8,9 @@ import * as _ from 'lodash-es';
 import { ActivatedRoute } from '@angular/router';
 import { IInteractEventObject, IInteractEventEdata } from '@sunbird/telemetry';
 @Component({
-  selector: 'app-assign-badges-content',
-  templateUrl: './assign-badges-content.component.html'
+    selector: 'app-assign-badges-content',
+    templateUrl: './assign-badges-content.component.html',
+    standalone: false
 })
 export class AssignBadgesContentComponent implements OnInit, OnDestroy {
   showBadgeAssingModel: boolean;

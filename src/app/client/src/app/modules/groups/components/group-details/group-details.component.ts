@@ -13,9 +13,10 @@ import { ADD_ACTIVITY, PAGE_LOADED} from '../../interfaces/telemetryConstants';
 import { sessionKeys } from '../../../../modules/groups/interfaces/group';
 
 @Component({
-  selector: 'app-group-details',
-  templateUrl: './group-details.component.html',
-  styleUrls: ['./group-details.component.scss']
+    selector: 'app-group-details',
+    templateUrl: './group-details.component.html',
+    styleUrls: ['./group-details.component.scss'],
+    standalone: false
 })
 export class GroupDetailsComponent implements OnInit, OnDestroy {
   @ViewChild('addActivityModal') addActivityModal;

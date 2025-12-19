@@ -4,9 +4,10 @@ import { FormService } from '@sunbird/core';
 import { GroupsService } from '../../../services';
 import { ActivatedRoute } from '@angular/router';
 @Component({
-  selector: 'app-activity-form',
-  templateUrl: './activity-form.component.html',
-  styleUrls: ['./activity-form.component.scss']
+    selector: 'app-activity-form',
+    templateUrl: './activity-form.component.html',
+    styleUrls: ['./activity-form.component.scss'],
+    standalone: false
 })
 export class ActivityFormComponent implements OnInit {
   @Output() nextClick = new EventEmitter<{ activityType: string }>();

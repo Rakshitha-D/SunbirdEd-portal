@@ -7,9 +7,10 @@ import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs';
 
 @Component({
-  selector: 'app-get',
-  templateUrl: './get.component.html',
-  styleUrls: ['./get.component.scss']
+    selector: 'app-get',
+    templateUrl: './get.component.html',
+    styleUrls: ['./get.component.scss'],
+    standalone: false
 })
 export class GetComponent implements OnInit, AfterViewInit, OnDestroy {
   /**

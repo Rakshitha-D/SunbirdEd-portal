@@ -5,9 +5,10 @@ import {Subscription} from 'rxjs';
 import {TenantService} from '@sunbird/core';
 
 @Component({
-  selector: 'app-auth-failed',
-  templateUrl: './auth-failed.component.html',
-  styleUrls: ['./auth-failed.component.scss']
+    selector: 'app-auth-failed',
+    templateUrl: './auth-failed.component.html',
+    styleUrls: ['./auth-failed.component.scss'],
+    standalone: false
 })
 export class AuthFailedComponent implements OnInit, OnDestroy {
   instance: string;

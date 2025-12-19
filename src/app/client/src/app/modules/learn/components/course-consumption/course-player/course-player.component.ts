@@ -20,9 +20,10 @@ import { NotificationServiceImpl } from '../../../../notification/services/notif
 import { CsCourseService } from '@project-sunbird/client-services/services/course/interface';
 
 @Component({
-  selector: 'app-course-player',
-  templateUrl: './course-player.component.html',
-  styleUrls: ['course-player.component.scss']
+    selector: 'app-course-player',
+    templateUrl: './course-player.component.html',
+    styleUrls: ['course-player.component.scss'],
+    standalone: false
 })
 export class CoursePlayerComponent implements OnInit, OnDestroy {
   @ViewChild('modal') modal;

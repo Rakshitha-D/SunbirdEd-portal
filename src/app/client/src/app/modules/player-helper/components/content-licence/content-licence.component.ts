@@ -3,9 +3,10 @@ import { ResourceService } from '@sunbird/shared';
 import * as _ from 'lodash-es';
 
 @Component({
-  selector: 'app-content-licence',
-  templateUrl: './content-licence.component.html',
-  styleUrls: ['./content-licence.component.scss']
+    selector: 'app-content-licence',
+    templateUrl: './content-licence.component.html',
+    styleUrls: ['./content-licence.component.scss'],
+    standalone: false
 })
 export class ContentLicenceComponent implements OnInit {
 

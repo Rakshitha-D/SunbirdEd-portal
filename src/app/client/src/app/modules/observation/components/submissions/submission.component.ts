@@ -4,7 +4,8 @@ import { ResourceService } from '@sunbird/shared';
 @Component({
     selector: 'submission',
     templateUrl: './submission.component.html',
-    styleUrls: ['./submission.component.scss']
+    styleUrls: ['./submission.component.scss'],
+    standalone: false
 })
 export class SubmissionsComponent implements OnInit {
     @Input() submission;

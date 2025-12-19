@@ -5,9 +5,10 @@ import * as _ from 'lodash-es';
 import { Router } from '@angular/router';
 import { ProfileService } from '@sunbird/profile';
 @Component({
-  selector: 'app-signup-onboarding-info',
-  templateUrl: './signup-onboarding-info.component.html',
-  styleUrls: ['./signup-onboarding-info.component.scss', '../signup/signup_form.component.scss']
+    selector: 'app-signup-onboarding-info',
+    templateUrl: './signup-onboarding-info.component.html',
+    styleUrls: ['./signup-onboarding-info.component.scss', '../signup/signup_form.component.scss'],
+    standalone: false
 })
 export class SignupOnboardingInfoComponent implements OnInit {
 

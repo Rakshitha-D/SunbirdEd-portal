@@ -3,9 +3,10 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GroupsService } from '../../services';
 @Component({
-  selector: 'app-ftu-popup',
-  templateUrl: './ftu-popup.component.html',
-  styleUrls: ['./ftu-popup.component.scss']
+    selector: 'app-ftu-popup',
+    templateUrl: './ftu-popup.component.html',
+    styleUrls: ['./ftu-popup.component.scss'],
+    standalone: false
 })
 export class FtuPopupComponent implements OnInit {
 

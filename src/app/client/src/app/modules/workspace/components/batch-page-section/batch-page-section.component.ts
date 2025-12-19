@@ -15,8 +15,9 @@ import { Subject } from 'rxjs';
 
 
 @Component({
-  selector: 'app-batch-page-section',
-  templateUrl: './batch-page-section.component.html'
+    selector: 'app-batch-page-section',
+    templateUrl: './batch-page-section.component.html',
+    standalone: false
 })
 export class BatchPageSectionComponent extends WorkSpace implements OnInit, OnDestroy , AfterViewInit {
 

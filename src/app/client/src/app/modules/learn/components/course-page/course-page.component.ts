@@ -19,7 +19,8 @@ import { ContentManagerService } from '../../../public/module/offline/services/c
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  templateUrl: './course-page.component.html'
+    templateUrl: './course-page.component.html',
+    standalone: false
 })
 export class CoursePageComponent implements OnInit, OnDestroy, AfterViewInit {
 

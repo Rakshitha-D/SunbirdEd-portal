@@ -6,7 +6,8 @@ import { LocationStrategy } from '@angular/common';
 @Component({
     selector: 'add-entity',
     templateUrl: './add-entity.component.html',
-    styleUrls: ['./add-entity.component.scss']
+    styleUrls: ['./add-entity.component.scss'],
+    standalone: false
 })
 export class AddEntityComponent implements OnInit {
     @ViewChild('modal') modal;

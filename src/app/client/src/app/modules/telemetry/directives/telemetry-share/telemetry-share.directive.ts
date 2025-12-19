@@ -6,7 +6,8 @@ import { ActivatedRoute } from '@angular/router';
  * TelemetryInteract Directive
  */
 @Directive({
-  selector: '[appTelemetryShare]'
+    selector: '[appTelemetryShare]',
+    standalone: false
 })
 export class TelemetryShareDirective implements OnInit {
   /**

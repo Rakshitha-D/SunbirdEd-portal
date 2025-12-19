@@ -17,8 +17,9 @@ jQuery.fn.iziModal = iziModal;
  * Component Launches the Content Editor in a IFrame Modal
  */
 @Component({
-  selector: 'app-content-editor',
-  templateUrl: './content-editor.component.html'
+    selector: 'app-content-editor',
+    templateUrl: './content-editor.component.html',
+    standalone: false
 })
 export class ContentEditorComponent implements OnInit, OnDestroy {
 

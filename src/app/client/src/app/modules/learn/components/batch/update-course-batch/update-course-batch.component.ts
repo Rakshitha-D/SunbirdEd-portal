@@ -19,8 +19,9 @@ import { DiscussionService } from '../../../../../../app/modules/discussion/serv
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 
 @Component({
-  selector: 'app-update-course-batch',
-  templateUrl: './update-course-batch.component.html'
+    selector: 'app-update-course-batch',
+    templateUrl: './update-course-batch.component.html',
+    standalone: false
 })
 export class UpdateCourseBatchComponent implements OnInit, OnDestroy, AfterViewInit {
 

@@ -12,9 +12,10 @@ import { CacheService } from '../../../../../../shared/services/cache-service/ca
 import { IInteractEventObject, IInteractEventEdata, TelemetryService } from '@sunbird/telemetry';
 
 @Component({
-  selector: 'app-public-batch-details',
-  templateUrl: './public-batch-details.component.html',
-  styleUrls: ['./public-batch-details.component.scss']
+    selector: 'app-public-batch-details',
+    templateUrl: './public-batch-details.component.html',
+    styleUrls: ['./public-batch-details.component.scss'],
+    standalone: false
 })
 export class PublicBatchDetailsComponent implements OnInit, OnDestroy {
   public unsubscribe = new Subject<void>();

@@ -3,9 +3,10 @@ import { ResourceService, ICard } from '@sunbird/shared';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-dial-code-card',
-  templateUrl: './dial-code-card.component.html',
-  styleUrls: ['./dial-code-card.component.scss']
+    selector: 'app-dial-code-card',
+    templateUrl: './dial-code-card.component.html',
+    styleUrls: ['./dial-code-card.component.scss'],
+    standalone: false
 })
 export class DialCodeCardComponent implements OnInit {
 

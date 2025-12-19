@@ -8,9 +8,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 import * as _ from 'lodash-es';
 
 @Component({
-  selector: 'app-explore-curriculum-courses',
-  templateUrl: './explore-curriculum-courses.component.html',
-  styleUrls: ['./explore-curriculum-courses.component.scss']
+    selector: 'app-explore-curriculum-courses',
+    templateUrl: './explore-curriculum-courses.component.html',
+    styleUrls: ['./explore-curriculum-courses.component.scss'],
+    standalone: false
 })
 export class ExploreCurriculumCoursesComponent implements OnInit {
   public defaultBg = false;

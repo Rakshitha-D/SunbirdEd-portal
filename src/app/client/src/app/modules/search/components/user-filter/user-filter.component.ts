@@ -11,8 +11,9 @@ import { IInteractEventObject, IInteractEventEdata } from '@sunbird/telemetry';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-user-filter',
-  templateUrl: './user-filter.component.html'
+    selector: 'app-user-filter',
+    templateUrl: './user-filter.component.html',
+    standalone: false
 })
 
 export class UserFilterComponent implements OnInit {

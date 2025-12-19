@@ -9,7 +9,8 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-account-recovery-info',
   templateUrl: './account-recovery-info.component.html',
-  styleUrls: ['./account-recovery-info.component.scss']
+  styleUrls: ['./account-recovery-info.component.scss'],
+  standalone: false
 })
 export class AccountRecoveryInfoComponent implements OnInit, OnDestroy {
   @Output() close = new EventEmitter<any>();
@@ -66,29 +67,29 @@ export class AccountRecoveryInfoComponent implements OnInit, OnDestroy {
 
   validateAndEditContact() {
     if (this.userProfile) {
-        const request: any = {
-            key: this.userProfile.email || this.userProfile.phone || this.userProfile.recoveryEmail,
-            userId: this.userProfile.userId,
-            templateId: this.configService.appConfig.OTPTemplate.updateContactTemplate,
-            type: ''
-        };
-        if ((this.userProfile.email && !this.userProfile.phone) ||
+      const request: any = {
+        key: this.userProfile.email || this.userProfile.phone || this.userProfile.recoveryEmail,
+        userId: this.userProfile.userId,
+        templateId: this.configService.appConfig.OTPTemplate.updateContactTemplate,
+        type: ''
+      };
+      if ((this.userProfile.email && !this.userProfile.phone) ||
         (!this.userProfile.email && !this.userProfile.phone && this.userProfile.recoveryEmail)) {
-            request.type = 'email';
-        } else if (this.userProfile.phone || this.userProfile.recoveryPhone) {
-            request.type = 'phone';
-        }
-        this.otpData = {
-            'type': request.type,
-            'value': request.key,
-            'instructions': this.resourceService.frmelmnts.lbl.otpcontactinfo,
-            'retryMessage': request.type === 'phone' ?
-              this.resourceService.frmelmnts.lbl.unableToUpdateMobile : this.resourceService.frmelmnts.lbl.unableToUpdateEmail,
-            'wrongOtpMessage': request.type === 'phone' ? this.resourceService.frmelmnts.lbl.wrongPhoneOTP :
-              this.resourceService.frmelmnts.lbl.wrongEmailOTP
-        };
-        this.showOTPForm = true;
-        this.generateOTP({ request });
+        request.type = 'email';
+      } else if (this.userProfile.phone || this.userProfile.recoveryPhone) {
+        request.type = 'phone';
+      }
+      this.otpData = {
+        'type': request.type,
+        'value': request.key,
+        'instructions': this.resourceService.frmelmnts.lbl.otpcontactinfo,
+        'retryMessage': request.type === 'phone' ?
+          this.resourceService.frmelmnts.lbl.unableToUpdateMobile : this.resourceService.frmelmnts.lbl.unableToUpdateEmail,
+        'wrongOtpMessage': request.type === 'phone' ? this.resourceService.frmelmnts.lbl.wrongPhoneOTP :
+          this.resourceService.frmelmnts.lbl.wrongEmailOTP
+      };
+      this.showOTPForm = true;
+      this.generateOTP({ request });
     }
   }
 

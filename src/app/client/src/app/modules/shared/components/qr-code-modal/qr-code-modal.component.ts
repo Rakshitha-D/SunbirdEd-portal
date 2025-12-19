@@ -5,8 +5,9 @@ import * as _ from 'lodash-es';
 import { IInteractEventEdata } from '@sunbird/telemetry';
 
 @Component({
-  selector: 'app-qr-code-modal',
-  templateUrl: './qr-code-modal.component.html'
+    selector: 'app-qr-code-modal',
+    templateUrl: './qr-code-modal.component.html',
+    standalone: false
 })
 export class QrCodeModalComponent implements OnInit {
   @ViewChild('modal') modal;

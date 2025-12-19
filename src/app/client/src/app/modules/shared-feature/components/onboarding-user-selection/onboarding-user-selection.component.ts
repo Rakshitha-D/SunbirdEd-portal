@@ -21,9 +21,10 @@ interface IGuest {
 }
 
 @Component({
-  selector: 'app-onboarding-user-selection',
-  templateUrl: './onboarding-user-selection.component.html',
-  styleUrls: ['./onboarding-user-selection.component.scss']
+    selector: 'app-onboarding-user-selection',
+    templateUrl: './onboarding-user-selection.component.html',
+    styleUrls: ['./onboarding-user-selection.component.scss'],
+    standalone: false
 })
 export class OnboardingUserSelectionComponent implements OnInit, OnDestroy {
 

@@ -7,9 +7,10 @@ import { Subject } from 'rxjs';
 import * as _ from 'lodash-es';
 
 @Component({
-  selector: 'app-info-card',
-  templateUrl: './info-card.component.html',
-  styleUrls: ['./info-card.component.scss']
+    selector: 'app-info-card',
+    templateUrl: './info-card.component.html',
+    styleUrls: ['./info-card.component.scss'],
+    standalone: false
 })
 export class InfoCardComponent implements OnInit, OnDestroy {
 

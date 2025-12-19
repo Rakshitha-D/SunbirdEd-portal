@@ -7,9 +7,10 @@ import * as _ from 'lodash-es';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-forum',
-  templateUrl: './forum.component.html',
-  styleUrls: ['./forum.component.scss']
+    selector: 'app-forum',
+    templateUrl: './forum.component.html',
+    styleUrls: ['./forum.component.scss'],
+    standalone: false
 })
 
 export class ForumComponent implements OnInit, OnDestroy, AfterViewInit {

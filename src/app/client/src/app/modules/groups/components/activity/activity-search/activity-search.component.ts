@@ -26,9 +26,10 @@ import { CslFrameworkService } from '../../../../public/services/csl-framework/c
 
 
 @Component({
-  selector: 'app-activity-search',
-  templateUrl: './activity-search.component.html',
-  styleUrls: ['./activity-search.component.scss']
+    selector: 'app-activity-search',
+    templateUrl: './activity-search.component.html',
+    styleUrls: ['./activity-search.component.scss'],
+    standalone: false
 })
 export class ActivitySearchComponent implements OnInit, OnDestroy {
   showFilters = false;

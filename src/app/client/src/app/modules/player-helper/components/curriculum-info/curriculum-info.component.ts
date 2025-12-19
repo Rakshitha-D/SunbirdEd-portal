@@ -9,8 +9,9 @@ export interface ICurriculum {
 }
 
 @Component({
-  selector: 'app-curriculum-info',
-  templateUrl: './curriculum-info.component.html'
+    selector: 'app-curriculum-info',
+    templateUrl: './curriculum-info.component.html',
+    standalone: false
 })
 export class CurriculumInfoComponent implements OnInit {
 

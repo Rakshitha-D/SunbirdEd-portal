@@ -18,9 +18,10 @@ import { OnDemandReportService } from './../../../shared/services/on-demand-repo
  * This component shows the course progress dashboard
  */
 @Component({
-  selector: 'app-course-progress',
-  templateUrl: './course-progress.component.html',
-  styleUrls: ['./course-progress.component.scss']
+    selector: 'app-course-progress',
+    templateUrl: './course-progress.component.html',
+    styleUrls: ['./course-progress.component.scss'],
+    standalone: false
 })
 export class CourseProgressComponent implements OnInit, OnDestroy, AfterViewInit {
   modelChanged: Subject<string> = new Subject<string>();

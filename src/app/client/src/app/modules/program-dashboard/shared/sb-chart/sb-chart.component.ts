@@ -5,9 +5,10 @@ import * as _ from "lodash-es";
 import { PdServiceService } from '../services/pd-service/pd-service.service';
 import dayjs from 'dayjs';
 @Component({
-  selector: 'app-sb-chart',
-  templateUrl: './sb-chart.component.html',
-  styleUrls: ['./sb-chart.component.scss'],
+    selector: 'app-sb-chart',
+    templateUrl: './sb-chart.component.html',
+    styleUrls: ['./sb-chart.component.scss'],
+    standalone: false
 })
 export class SbChartComponent implements OnInit, OnChanges {
   @Input() chart;

@@ -10,9 +10,10 @@ import { map, mergeMap, tap, first } from 'rxjs/operators';
 import { LazzyLoadScriptService } from 'LazzyLoadScriptService';
 
 @Component({
-  selector: 'app-new-collection-editor',
-  templateUrl: './new-collection-editor.component.html',
-  styleUrls: ['./new-collection-editor.component.scss']
+    selector: 'app-new-collection-editor',
+    templateUrl: './new-collection-editor.component.html',
+    styleUrls: ['./new-collection-editor.component.scss'],
+    standalone: false
 })
 export class NewCollectionEditorComponent implements OnInit, OnDestroy {
   public editorConfig: any;

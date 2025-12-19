@@ -4,9 +4,10 @@ import * as ClassicEditor from '@project-sunbird/ckeditor-build-classic';
 import { ISummaryObject } from '../../interfaces';
 
 @Component({
-  selector: 'app-add-summary-modal',
-  templateUrl: './add-summary-modal.component.html',
-  styleUrls: ['./add-summary-modal.component.scss']
+    selector: 'app-add-summary-modal',
+    templateUrl: './add-summary-modal.component.html',
+    styleUrls: ['./add-summary-modal.component.scss'],
+    standalone: false
 })
 export class AddSummaryModalComponent implements OnInit, OnDestroy, AfterViewInit {
 

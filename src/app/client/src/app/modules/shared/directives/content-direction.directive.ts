@@ -3,7 +3,8 @@ import { Directive, ElementRef, Input, AfterViewInit, Renderer2 } from '@angular
 import * as _ from 'lodash-es';
 import { CacheService } from '../services/cache-service/cache.service';
 @Directive({
-  selector: '[appContentDirection]'
+    selector: '[appContentDirection]',
+    standalone: false
 })
 export class ContentDirectionDirective implements AfterViewInit  {
   /**

@@ -15,8 +15,9 @@ import { IImpressionEventInput } from '@sunbird/telemetry';
  * The uploaded component search for all the uploaded
 */
 @Component({
-  selector: 'app-uploaded',
-  templateUrl: './uploaded.component.html'
+    selector: 'app-uploaded',
+    templateUrl: './uploaded.component.html',
+    standalone: false
 })
 export class UploadedComponent extends WorkSpace implements OnInit, AfterViewInit {
   @ViewChild('modalTemplate')

@@ -4,9 +4,10 @@ import { IInteractEventEdata } from '@sunbird/telemetry';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-content-manager-info-pop-up',
-  templateUrl: './content-manager-info-pop-up.component.html',
-  styleUrls: ['./content-manager-info-pop-up.component.scss']
+    selector: 'app-content-manager-info-pop-up',
+    templateUrl: './content-manager-info-pop-up.component.html',
+    styleUrls: ['./content-manager-info-pop-up.component.scss'],
+    standalone: false
 })
 export class ContentManagerInfoPopUpComponent implements OnInit {
 

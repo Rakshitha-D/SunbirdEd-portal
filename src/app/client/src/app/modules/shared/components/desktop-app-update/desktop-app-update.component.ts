@@ -8,9 +8,10 @@ import { AppUpdateService } from '../../../core/services/app-update/app-update.s
 import { ResourceService } from '../../services/resource/resource.service';
 
 @Component({
-  selector: 'app-desktop-app-update',
-  templateUrl: './desktop-app-update.component.html',
-  styleUrls: ['./desktop-app-update.component.scss']
+    selector: 'app-desktop-app-update',
+    templateUrl: './desktop-app-update.component.html',
+    styleUrls: ['./desktop-app-update.component.scss'],
+    standalone: false
 })
 export class DesktopAppUpdateComponent implements OnInit, OnDestroy {
 

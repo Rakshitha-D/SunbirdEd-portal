@@ -19,9 +19,10 @@ import { IImpressionEventInput } from '@sunbird/telemetry';
  * The limited publish component to search limited published content
 */
 @Component({
-  selector: 'app-limited-published',
-  templateUrl: './limited-published.component.html',
-  styleUrls: ['./limited-published.component.scss']
+    selector: 'app-limited-published',
+    templateUrl: './limited-published.component.html',
+    styleUrls: ['./limited-published.component.scss'],
+    standalone: false
 })
 export class LimitedPublishedComponent extends WorkSpace implements OnInit, AfterViewInit {
 

@@ -25,8 +25,9 @@ export function csGroupServiceFactory() {
 }
 
 @Directive({
-  selector: '[appAddToGroup]',
-  providers: [{ provide: 'CS_GROUP_SERVICE', useFactory: csGroupServiceFactory}]
+    selector: '[appAddToGroup]',
+    providers: [{ provide: 'CS_GROUP_SERVICE', useFactory: csGroupServiceFactory }],
+    standalone: false
 })
 export class AddToGroupDirective implements OnInit {
 

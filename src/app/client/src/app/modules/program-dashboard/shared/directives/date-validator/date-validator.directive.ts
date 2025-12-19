@@ -1,7 +1,8 @@
 import { Directive, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appDateValidator]'
+    selector: '[appDateValidator]',
+    standalone: false
 })
 export class DateValidatorDirective {
   private specialKeys: Array<string> = ['Backspace', 'Tab', 'End', 'Home', '/'];

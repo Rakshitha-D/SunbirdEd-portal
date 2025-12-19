@@ -9,7 +9,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { orderBy, get, toLower, trim } from 'lodash-es';
 
 @Pipe({
-  name: 'sortBy'
+    name: 'sortBy',
+    standalone: false
 })
 
 export class SortByPipe implements PipeTransform {

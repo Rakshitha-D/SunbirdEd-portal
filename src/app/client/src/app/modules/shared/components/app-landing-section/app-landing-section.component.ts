@@ -5,10 +5,11 @@ import { Subject } from 'rxjs';
 import { ResourceService } from '../../services';
 
 @Component({
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'app-landing-section',
-  templateUrl: './app-landing-section.component.html',
-  styleUrls: ['./app-landing-section.component.scss']
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-landing-section',
+    templateUrl: './app-landing-section.component.html',
+    styleUrls: ['./app-landing-section.component.scss'],
+    standalone: false
 })
 export class AppLandingSectionComponent implements OnInit {
 

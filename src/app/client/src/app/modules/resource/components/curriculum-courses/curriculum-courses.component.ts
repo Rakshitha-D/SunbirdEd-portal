@@ -12,9 +12,10 @@ import { map } from 'rxjs/operators';
 import { IImpressionEventInput, TelemetryService } from '@sunbird/telemetry';
 
 @Component({
-  selector: 'app-curriculum-courses',
-  templateUrl: './curriculum-courses.component.html',
-  styleUrls: ['./curriculum-courses.component.scss']
+    selector: 'app-curriculum-courses',
+    templateUrl: './curriculum-courses.component.html',
+    styleUrls: ['./curriculum-courses.component.scss'],
+    standalone: false
 })
 export class CurriculumCoursesComponent implements OnInit, OnDestroy {
 

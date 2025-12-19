@@ -14,9 +14,10 @@ import { ProfileService } from '@sunbird/profile';
 import {takeUntil} from 'rxjs/operators';
 
 @Component({
-  selector: 'app-user-search',
-  templateUrl: './user-search.component.html',
-  styleUrls: ['./user-search.component.scss']
+    selector: 'app-user-search',
+    templateUrl: './user-search.component.html',
+    styleUrls: ['./user-search.component.scss'],
+    standalone: false
 })
 export class UserSearchComponent implements OnInit, AfterViewInit, OnDestroy {
   private searchService: SearchService;

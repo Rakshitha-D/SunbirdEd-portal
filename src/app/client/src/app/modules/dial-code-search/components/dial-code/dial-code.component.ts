@@ -12,9 +12,10 @@ import { DialCodeService } from '../../services/dial-code/dial-code.service';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-dial-code',
-  templateUrl: './dial-code.component.html',
-  styleUrls: ['./dial-code.component.scss']
+    selector: 'app-dial-code',
+    templateUrl: './dial-code.component.html',
+    styleUrls: ['./dial-code.component.scss'],
+    standalone: false
 })
 export class DialCodeComponent implements OnInit, OnDestroy {
   public inviewLogs: any = [];

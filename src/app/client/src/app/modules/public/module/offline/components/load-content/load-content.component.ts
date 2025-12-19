@@ -8,9 +8,10 @@ import * as _ from 'lodash-es';
 import { IInteractEventEdata } from '@sunbird/telemetry';
 
 @Component({
-  selector: 'app-load-content',
-  templateUrl: './load-content.component.html',
-  styleUrls: ['./load-content.component.scss']
+    selector: 'app-load-content',
+    templateUrl: './load-content.component.html',
+    styleUrls: ['./load-content.component.scss'],
+    standalone: false
 })
 export class LoadContentComponent implements OnInit, OnDestroy {
   @ViewChild('modal') modal;

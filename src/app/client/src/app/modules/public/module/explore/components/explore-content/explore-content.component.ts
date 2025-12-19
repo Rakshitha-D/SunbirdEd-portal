@@ -15,8 +15,9 @@ import {omit, groupBy, get, uniqBy, toLower, find, map as _map, forEach, each} f
 import { CslFrameworkService } from '../../../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  templateUrl: './explore-content.component.html',
-  styleUrls: ['./explore-content.component.scss']
+    templateUrl: './explore-content.component.html',
+    styleUrls: ['./explore-content.component.scss'],
+    standalone: false
 })
 export class ExploreContentComponent implements OnInit, OnDestroy, AfterViewInit {
 

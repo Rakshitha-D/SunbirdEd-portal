@@ -2,9 +2,10 @@ import { Component, Input, HostListener, ElementRef, Output, EventEmitter, OnCha
 import { ToasterService } from '../../services/toaster/toaster.service';
 
 @Component({
-  selector: 'app-material-auto-complete',
-  templateUrl: './material-auto-complete.component.html',
-  styleUrls: ['./material-auto-complete.component.scss']
+    selector: 'app-material-auto-complete',
+    templateUrl: './material-auto-complete.component.html',
+    styleUrls: ['./material-auto-complete.component.scss'],
+    standalone: false
 })
 export class MaterialAutoCompleteComponent implements OnChanges {
   @Input() dynamicplaceholder:string;

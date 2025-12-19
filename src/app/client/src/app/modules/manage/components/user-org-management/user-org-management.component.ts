@@ -14,9 +14,10 @@ import {Subject} from 'rxjs';
 import { TncService } from '@sunbird/core';
 
 @Component({
-  selector: 'app-user-org-management',
-  templateUrl: 'user-org-management.component.html',
-  styleUrls: ['user-org-management.component.scss']
+    selector: 'app-user-org-management',
+    templateUrl: 'user-org-management.component.html',
+    styleUrls: ['user-org-management.component.scss'],
+    standalone: false
 })
 export class UserOrgManagementComponent implements OnInit, AfterViewInit, OnDestroy {
 

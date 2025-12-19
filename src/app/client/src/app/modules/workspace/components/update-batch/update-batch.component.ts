@@ -12,9 +12,10 @@ import dayjs from 'dayjs';
 import { LazzyLoadScriptService } from 'LazzyLoadScriptService';
 
 @Component({
-  selector: 'app-update-batch',
-  templateUrl: './update-batch.component.html',
-  styleUrls: ['./update-batch.component.scss']
+    selector: 'app-update-batch',
+    templateUrl: './update-batch.component.html',
+    styleUrls: ['./update-batch.component.scss'],
+    standalone: false
 })
 export class UpdateBatchComponent implements OnInit, OnDestroy, AfterViewInit {
 

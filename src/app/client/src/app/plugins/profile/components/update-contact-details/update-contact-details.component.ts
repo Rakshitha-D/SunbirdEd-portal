@@ -11,7 +11,8 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-update-contact-details',
   templateUrl: './update-contact-details.component.html',
-  styleUrls: ['./update-contact-details.component.scss']
+  styleUrls: ['./update-contact-details.component.scss'],
+  standalone: false
 })
 export class UpdateContactDetailsComponent implements OnInit, OnDestroy {
   public unsubscribe = new Subject<void>();
@@ -42,7 +43,7 @@ export class UpdateContactDetailsComponent implements OnInit, OnDestroy {
   initializeFormFields() {
     if (this.contactType === 'phone') {
       this.contactTypeForm = new UntypedFormGroup({
-        phone: new UntypedFormControl('', [Validators.required , Validators.pattern(/^[6-9]\d{9}$/)]),
+        phone: new UntypedFormControl('', [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]),
         uniqueContact: new UntypedFormControl(null, [Validators.required])
       });
       this.onContactValueChange();
@@ -60,26 +61,26 @@ export class UpdateContactDetailsComponent implements OnInit, OnDestroy {
   private async validateAndEditContact() {
     if (this.userProfile) {
       const request: any = {
-          key: this.userProfile.email || this.userProfile.phone || this.userProfile.recoveryEmail,
-          userId: this.userProfile.userId,
-          templateId: this.configService.appConfig.OTPTemplate.updateContactTemplate,
-          type: ''
+        key: this.userProfile.email || this.userProfile.phone || this.userProfile.recoveryEmail,
+        userId: this.userProfile.userId,
+        templateId: this.configService.appConfig.OTPTemplate.updateContactTemplate,
+        type: ''
       };
       if ((this.userProfile.email && !this.userProfile.phone) ||
-      (!this.userProfile.email && !this.userProfile.phone && this.userProfile.recoveryEmail)) {
-          request.type = 'email';
+        (!this.userProfile.email && !this.userProfile.phone && this.userProfile.recoveryEmail)) {
+        request.type = 'email';
       } else if (this.userProfile.phone || this.userProfile.recoveryPhone) {
-          request.type = 'phone';
+        request.type = 'phone';
       }
       const otpData = {
-          'type': request.type,
-          'value': request.key,
-          'instructions': this.resourceService.frmelmnts.lbl.otpcontactinfo,
-          'retryMessage': request.type === 'phone' ?
-            this.resourceService.frmelmnts.lbl.unableToUpdateMobile : this.resourceService.frmelmnts.lbl.unableToUpdateEmail,
-          'wrongOtpMessage': request.type === 'phone' ? this.resourceService.frmelmnts.lbl.wrongPhoneOTP :
-            this.resourceService.frmelmnts.lbl.wrongEmailOTP
-        };
+        'type': request.type,
+        'value': request.key,
+        'instructions': this.resourceService.frmelmnts.lbl.otpcontactinfo,
+        'retryMessage': request.type === 'phone' ?
+          this.resourceService.frmelmnts.lbl.unableToUpdateMobile : this.resourceService.frmelmnts.lbl.unableToUpdateEmail,
+        'wrongOtpMessage': request.type === 'phone' ? this.resourceService.frmelmnts.lbl.wrongPhoneOTP :
+          this.resourceService.frmelmnts.lbl.wrongEmailOTP
+      };
       this.verifiedUser = false;
 
       this.generateOTP({ request }, otpData);
@@ -186,7 +187,7 @@ export class UpdateContactDetailsComponent implements OnInit, OnDestroy {
         this.toasterService.error(failedgenerateOTPMessage);
         this.enableSubmitBtn = true;
         if (!this.verifiedUser) {
-            this.closeModal();
+          this.closeModal();
         }
       }
     );
@@ -194,27 +195,27 @@ export class UpdateContactDetailsComponent implements OnInit, OnDestroy {
 
   updateProfile(data) {
     if (this.verifiedUser) {
-        this.profileService.updateProfile(data).subscribe(res => {
-          this.closeModal();
-          const sMessage = this.contactType === 'phone' ?
-            this.resourceService.messages.smsg.m0047 : this.resourceService.messages.smsg.m0048;
-          this.toasterService.success(sMessage);
-        }, err => {
-          this.closeModal();
-          const fMessage = this.contactType === 'phone' ?
-            this.resourceService.messages.emsg.m0014 : this.resourceService.messages.emsg.m0015;
-          this.toasterService.error(fMessage);
-        });
+      this.profileService.updateProfile(data).subscribe(res => {
+        this.closeModal();
+        const sMessage = this.contactType === 'phone' ?
+          this.resourceService.messages.smsg.m0047 : this.resourceService.messages.smsg.m0048;
+        this.toasterService.success(sMessage);
+      }, err => {
+        this.closeModal();
+        const fMessage = this.contactType === 'phone' ?
+          this.resourceService.messages.emsg.m0014 : this.resourceService.messages.emsg.m0015;
+        this.toasterService.error(fMessage);
+      });
     } else {
-        this.initializeFormFields();
-        this.verifiedUser = true;
-        this.showForm = true;
+      this.initializeFormFields();
+      this.verifiedUser = true;
+      this.showForm = true;
     }
   }
 
   setInteractEventData() {
     const id = this.contactType === 'phone' ?
-    'submit-mobile' : 'submit-emailId';
+      'submit-mobile' : 'submit-emailId';
     this.submitInteractEdata = {
       id: id,
       type: 'click',

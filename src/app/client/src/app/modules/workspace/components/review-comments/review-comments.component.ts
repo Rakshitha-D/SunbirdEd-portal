@@ -10,9 +10,10 @@ import { IInteractEventObject, IInteractEventEdata } from '@sunbird/telemetry';
 import dayjs from 'dayjs';
 
 @Component({
-  selector: 'app-review-comments',
-  templateUrl: './review-comments.component.html',
-  styleUrls: ['./review-comments.component.scss']
+    selector: 'app-review-comments',
+    templateUrl: './review-comments.component.html',
+    styleUrls: ['./review-comments.component.scss'],
+    standalone: false
 })
 export class ReviewCommentsComponent implements OnInit, OnChanges, OnDestroy {
 

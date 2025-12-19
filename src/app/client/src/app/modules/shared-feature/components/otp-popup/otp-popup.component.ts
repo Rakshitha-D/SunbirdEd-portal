@@ -8,9 +8,10 @@ import { TenantService, OtpService, UserService } from '@sunbird/core';
 import { IInteractEventObject, IInteractEventEdata } from '@sunbird/telemetry';
 
 @Component({
-  selector: 'app-otp-popup',
-  templateUrl: './otp-popup.component.html',
-  styleUrls: ['./otp-popup.component.scss']
+    selector: 'app-otp-popup',
+    templateUrl: './otp-popup.component.html',
+    styleUrls: ['./otp-popup.component.scss'],
+    standalone: false
 })
 export class OtpPopupComponent implements OnInit, OnDestroy {
 

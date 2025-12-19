@@ -12,9 +12,10 @@ import { takeUntil } from 'rxjs/operators';
 
 
 @Component({
-  selector: 'app-course-dashboard',
-  templateUrl: './course-dashboard.component.html',
-  styleUrls: ['./course-dashboard.component.scss']
+    selector: 'app-course-dashboard',
+    templateUrl: './course-dashboard.component.html',
+    styleUrls: ['./course-dashboard.component.scss'],
+    standalone: false
 })
 export class CourseDashboardComponent implements OnInit, OnDestroy {
 

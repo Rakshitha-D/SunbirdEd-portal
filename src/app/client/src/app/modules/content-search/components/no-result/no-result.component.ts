@@ -8,9 +8,10 @@ import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-no-result-found',
-  templateUrl: './no-result.component.html',
-  styleUrls: ['./no-result.component.scss']
+    selector: 'app-no-result-found',
+    templateUrl: './no-result.component.html',
+    styleUrls: ['./no-result.component.scss'],
+    standalone: false
 })
 export class NoResultComponent implements OnInit {
 

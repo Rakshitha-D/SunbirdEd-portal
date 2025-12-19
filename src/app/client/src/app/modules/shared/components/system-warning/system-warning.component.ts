@@ -6,9 +6,10 @@ import { SystemInfoService } from '../../../public/module/offline/services/syste
 import { ResourceService } from '../../services/resource/resource.service';
 
 @Component({
-  selector: 'app-system-warning',
-  templateUrl: './system-warning.component.html',
-  styleUrls: ['./system-warning.component.scss']
+    selector: 'app-system-warning',
+    templateUrl: './system-warning.component.html',
+    styleUrls: ['./system-warning.component.scss'],
+    standalone: false
 })
 export class SystemWarningComponent implements OnInit, OnDestroy {
 

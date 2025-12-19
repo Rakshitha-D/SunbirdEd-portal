@@ -16,9 +16,10 @@ import * as _ from 'lodash-es';
  * Display organization creation, consumption dashboard data
  */
 @Component({
-  selector: 'app-organization',
-  templateUrl: './organization.component.html',
-  styleUrls: ['./organization.component.scss']
+    selector: 'app-organization',
+    templateUrl: './organization.component.html',
+    styleUrls: ['./organization.component.scss'],
+    standalone: false
 })
 
 /**

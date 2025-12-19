@@ -9,7 +9,8 @@ import { CoursesService, PermissionService, GeneraliseLabelService } from '@sunb
 import dayjs from 'dayjs';
 import { GroupsService } from '../../../../groups/services/groups/groups.service';
 @Component({
-  templateUrl: './course-consumption-page.component.html'
+    templateUrl: './course-consumption-page.component.html',
+    standalone: false
 })
 export class CourseConsumptionPageComponent implements OnInit, OnDestroy {
   public courseId: string;

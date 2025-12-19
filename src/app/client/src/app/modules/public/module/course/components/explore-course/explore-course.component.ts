@@ -15,7 +15,8 @@ import { CacheService } from '../../../../../shared/services/cache-service/cache
 import { CslFrameworkService } from '../../../../services/csl-framework/csl-framework.service';
 
 @Component({
-    templateUrl: './explore-course.component.html'
+    templateUrl: './explore-course.component.html',
+    standalone: false
 })
 export class ExploreCourseComponent implements OnInit, OnDestroy, AfterViewInit {
     public showLoader = true;

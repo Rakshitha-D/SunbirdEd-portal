@@ -4,7 +4,8 @@ import * as _ from 'lodash-es';
 import { IHighlightText } from '../../interfaces';
 
 @Directive({
-  selector: '[appHighlightText]'
+    selector: '[appHighlightText]',
+    standalone: false
 })
 export class HighlightTextDirective implements OnInit, OnDestroy {
 

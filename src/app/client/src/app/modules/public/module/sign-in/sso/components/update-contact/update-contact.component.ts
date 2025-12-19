@@ -14,8 +14,9 @@ import { TelemetryService } from '@sunbird/telemetry';
 import { RecaptchaComponent } from 'ng-recaptcha';
 
 @Component({
-  templateUrl: './update-contact.component.html',
-  styleUrls: ['./update-contact.component.scss']
+    templateUrl: './update-contact.component.html',
+    styleUrls: ['./update-contact.component.scss'],
+    standalone: false
 })
 export class UpdateContactComponent implements OnInit, AfterViewInit {
   @ViewChild('contactDetailsForm') private contactDetailsForm;

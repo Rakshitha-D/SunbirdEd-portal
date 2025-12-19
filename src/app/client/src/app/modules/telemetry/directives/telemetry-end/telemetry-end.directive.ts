@@ -3,7 +3,8 @@ import { IEndEventInput } from '../../interfaces';
 import { TelemetryService } from '../../services';
 
 @Directive({
-  selector: '[appTelemetryEnd]'
+    selector: '[appTelemetryEnd]',
+    standalone: false
 })
 export class TelemetryEndDirective implements OnDestroy {
 

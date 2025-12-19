@@ -3,9 +3,10 @@ import { ResourceService } from '@sunbird/shared';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-cert-preview-popup',
-  templateUrl: './cert-preview-popup.component.html',
-  styleUrls: ['./cert-preview-popup.component.scss']
+    selector: 'app-cert-preview-popup',
+    templateUrl: './cert-preview-popup.component.html',
+    styleUrls: ['./cert-preview-popup.component.scss'],
+    standalone: false
 })
 export class CertPreviewPopupComponent implements OnInit {
 

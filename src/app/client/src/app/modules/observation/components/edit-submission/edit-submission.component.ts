@@ -13,6 +13,7 @@ export interface Editdata {
     selector: 'app-edit-submission',
     templateUrl: './edit-submission.component.html',
     styleUrls: ['./edit-submission.component.scss'],
+    standalone: false
 })
 
 export class EditSubmissionComponent implements OnInit {

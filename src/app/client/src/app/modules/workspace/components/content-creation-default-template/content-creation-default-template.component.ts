@@ -8,13 +8,13 @@ import { Router } from '@angular/router';
 import { EditorService } from './../../services';
 
 @Component({
-  selector: 'app-content-creation-default-template',
-  templateUrl: './content-creation-default-template.component.html',
-  /**
-    * It is recommended to use ng-deep for dynamically added classes update
-    * ng-deep as angular upgrades the property
-    */
-   styles: [`
+    selector: 'app-content-creation-default-template',
+    templateUrl: './content-creation-default-template.component.html',
+    /**
+      * It is recommended to use ng-deep for dynamically added classes update
+      * ng-deep as angular upgrades the property
+      */
+    styles: [`
    ::ng-deep @media only screen and (min-width: 992px) {
        .modals.dimmer .ui.tree-picker.content-creation-concept-picker.scrolling.modal {
          top: 60px !important;
@@ -22,7 +22,8 @@ import { EditorService } from './../../services';
          margin: 0 0 0 -373px !important;
        }
       }
-    `]
+    `],
+    standalone: false
 })
 export class DefaultTemplateComponent implements OnInit {
   @Input() formFieldProperties: any;

@@ -11,9 +11,10 @@ import { get, chunk, map as _map, first, last, partition, forEach, flatMap } fro
 import $ from 'jquery';
 import 'datatables.net';
 @Component({
-  selector: 'app-dataset',
-  templateUrl: './dataset.component.html',
-  styleUrls: ['./dataset.component.scss']
+    selector: 'app-dataset',
+    templateUrl: './dataset.component.html',
+    styleUrls: ['./dataset.component.scss'],
+    standalone: false
 })
 export class DatasetComponent implements OnInit, OnDestroy {
 

@@ -6,8 +6,9 @@ import { TenantService } from '@sunbird/core';
 import { ResourceService, NavigationHelperService } from '@sunbird/shared';
 import { get } from 'lodash-es';
 @Component({
-  templateUrl: './select-org.component.html',
-  styleUrls: ['./select-org.component.scss']
+    templateUrl: './select-org.component.html',
+    styleUrls: ['./select-org.component.scss'],
+    standalone: false
 })
 export class SelectOrgComponent implements OnInit, AfterViewInit {
   public selectedOrg: any;

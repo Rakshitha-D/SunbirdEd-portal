@@ -4,9 +4,10 @@ import { GeneraliseLabelService } from '@sunbird/core';
 import { CslFrameworkService } from '../../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-course-details',
-  templateUrl: './course-details.component.html',
-  styleUrls: ['./course-details.component.scss']
+    selector: 'app-course-details',
+    templateUrl: './course-details.component.html',
+    styleUrls: ['./course-details.component.scss'],
+    standalone: false
 })
 export class CourseDetailsComponent {
   @Input() courseHierarchy: any;

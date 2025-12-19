@@ -9,9 +9,10 @@ import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-offline-help-videos',
-  templateUrl: './offline-help-videos.component.html',
-  styleUrls: ['./offline-help-videos.component.scss']
+    selector: 'app-offline-help-videos',
+    templateUrl: './offline-help-videos.component.html',
+    styleUrls: ['./offline-help-videos.component.scss'],
+    standalone: false
 })
 export class OfflineHelpVideosComponent implements OnInit, OnDestroy, AfterViewInit {
 

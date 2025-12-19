@@ -22,9 +22,10 @@ import { ContentManagerService } from '../../../../public/module/offline/service
 import { DiscussionTelemetryService } from './../../../../shared/services/discussion-telemetry/discussion-telemetry.service';
 
 @Component({
-  selector: 'app-course-consumption-header',
-  templateUrl: './course-consumption-header.component.html',
-  styleUrls: ['./course-consumption-header.component.scss']
+    selector: 'app-course-consumption-header',
+    templateUrl: './course-consumption-header.component.html',
+    styleUrls: ['./course-consumption-header.component.scss'],
+    standalone: false
 })
 export class CourseConsumptionHeaderComponent implements OnInit, AfterViewInit, OnDestroy {
 

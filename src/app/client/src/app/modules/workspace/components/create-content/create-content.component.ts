@@ -7,8 +7,9 @@ import { WorkSpaceService } from './../../services';
 import * as _ from 'lodash-es';
 // import { categoriesConfig } from '../../newConfig';
 @Component({
-  selector: 'app-create-content',
-  templateUrl: './create-content.component.html'
+    selector: 'app-create-content',
+    templateUrl: './create-content.component.html',
+    standalone: false
 })
 export class CreateContentComponent implements OnInit, AfterViewInit {
 

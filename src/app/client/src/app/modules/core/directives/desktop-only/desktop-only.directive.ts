@@ -2,7 +2,8 @@ import { Directive, TemplateRef, ViewContainerRef, OnInit } from '@angular/core'
 import { environment } from '@sunbird/environment';
 
 @Directive({
-  selector: '[appDesktopOnly]'
+    selector: '[appDesktopOnly]',
+    standalone: false
 })
 export class DesktopOnlyDirective implements OnInit {
   private hasView = false;

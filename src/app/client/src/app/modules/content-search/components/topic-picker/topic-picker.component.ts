@@ -13,9 +13,10 @@ interface TopicTreeNode {
   nodes: Array<TopicTreeNode>;
 }
 @Component({
-  selector: 'app-topic-picker',
-  templateUrl: './topic-picker.component.html',
-  styleUrls: ['./topic-picker.component.scss']
+    selector: 'app-topic-picker',
+    templateUrl: './topic-picker.component.html',
+    styleUrls: ['./topic-picker.component.scss'],
+    standalone: false
 })
 export class TopicPickerComponent implements OnInit, AfterViewInit, OnDestroy {
 

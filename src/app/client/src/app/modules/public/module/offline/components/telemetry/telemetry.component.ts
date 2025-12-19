@@ -9,9 +9,10 @@ import { Subject } from 'rxjs';
 import { ITelemetryInfo } from '../../interfaces';
 import { debounceTime } from 'rxjs/operators';
 @Component({
-  selector: 'app-telemetry',
-  templateUrl: './telemetry.component.html',
-  styleUrls: ['./telemetry.component.scss']
+    selector: 'app-telemetry',
+    templateUrl: './telemetry.component.html',
+    styleUrls: ['./telemetry.component.scss'],
+    standalone: false
 })
 export class TelemetryComponent implements OnInit, OnDestroy {
   telemetryInfo: ITelemetryInfo;

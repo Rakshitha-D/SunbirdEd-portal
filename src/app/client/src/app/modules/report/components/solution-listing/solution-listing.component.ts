@@ -8,9 +8,10 @@ import { first } from 'rxjs/operators';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-solution-listing',
-  templateUrl: './solution-listing.component.html',
-  styleUrls: ['./solution-listing.component.scss'],
+    selector: 'app-solution-listing',
+    templateUrl: './solution-listing.component.html',
+    styleUrls: ['./solution-listing.component.scss'],
+    standalone: false
 })
 export class SolutionListingComponent implements OnInit {
   public noResultFoundError: string;

@@ -1,14 +1,14 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {CoursesService, ManagedUserService, UserService} from '@sunbird/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { CoursesService, ManagedUserService, UserService } from '@sunbird/core';
 import {
   ConfigService,
   ResourceService,
   ToasterService, ConnectionService,
   IUserData, NavigationHelperService, UtilService, LayoutService
 } from '@sunbird/shared';
-import {ActivatedRoute, Router} from '@angular/router';
-import {IInteractEventEdata, TelemetryService} from '@sunbird/telemetry';
-import {environment} from '@sunbird/environment';
+import { ActivatedRoute, Router } from '@angular/router';
+import { IInteractEventEdata, TelemetryService } from '@sunbird/telemetry';
+import { environment } from '@sunbird/environment';
 import * as _ from 'lodash-es';
 import { zip, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -16,16 +16,17 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'app-choose-user',
   templateUrl: './choose-user.component.html',
-  styleUrls: ['./choose-user.component.scss']
+  styleUrls: ['./choose-user.component.scss'],
+  standalone: false
 })
 export class ChooseUserComponent implements OnInit, OnDestroy {
 
   constructor(public userService: UserService, public navigationHelperService: NavigationHelperService,
-              public toasterService: ToasterService, public router: Router, private utilService: UtilService,
-              public resourceService: ResourceService, private telemetryService: TelemetryService,
-              private configService: ConfigService, private managedUserService: ManagedUserService,
-              public activatedRoute: ActivatedRoute, public courseService: CoursesService,
-              private connectionService: ConnectionService, public layoutService: LayoutService) {
+    public toasterService: ToasterService, public router: Router, private utilService: UtilService,
+    public resourceService: ResourceService, private telemetryService: TelemetryService,
+    private configService: ConfigService, private managedUserService: ManagedUserService,
+    public activatedRoute: ActivatedRoute, public courseService: CoursesService,
+    private connectionService: ConnectionService, public layoutService: LayoutService) {
     this.instance = (<HTMLInputElement>document.getElementById('instance'))
       ? (<HTMLInputElement>document.getElementById('instance')).value.toUpperCase() : 'SUNBIRD';
   }
@@ -54,9 +55,9 @@ export class ChooseUserComponent implements OnInit, OnDestroy {
     this.telemetryImpressionEvent();
     this.setTelemetryData();
     this.connectionService.monitor()
-    .pipe(takeUntil(this.unsubscribe$)).subscribe(isConnected => {
-      this.isConnected = isConnected;
-    });
+      .pipe(takeUntil(this.unsubscribe$)).subscribe(isConnected => {
+        this.isConnected = isConnected;
+      });
 
     this.layoutConfiguration = this.layoutService.initlayoutConfig();
     this.layoutService.switchableLayout().
@@ -87,21 +88,21 @@ export class ChooseUserComponent implements OnInit, OnDestroy {
       isManagedUser: this.selectedUser.managedBy ? true : false
     };
     this.managedUserService.initiateSwitchUser(switchUserRequest).subscribe((data) => {
-        this.managedUserService.setSwitchUserData(userId, _.get(data, 'result.userSid'));
-        this.userService.userData$.subscribe((user: IUserData) => {
-          if (user && !user.err && user.userProfile.userId === userId) {
-            if (this.utilService.isDesktopApp && !this.isConnected) {
+      this.managedUserService.setSwitchUserData(userId, _.get(data, 'result.userSid'));
+      this.userService.userData$.subscribe((user: IUserData) => {
+        if (user && !user.err && user.userProfile.userId === userId) {
+          if (this.utilService.isDesktopApp && !this.isConnected) {
+            this.initializeManagedUser();
+          } else {
+            this.courseService.getEnrolledCourses().pipe(takeUntil(this.unsubscribe$)).subscribe((enrolledCourse) => {
               this.initializeManagedUser();
-            } else {
-              this.courseService.getEnrolledCourses().pipe(takeUntil(this.unsubscribe$)).subscribe((enrolledCourse) => {
-                this.initializeManagedUser();
-              });
-            }
+            });
           }
-        });
-      }, (err) => {
-        this.toasterService.error(_.get(this.resourceService, 'messages.emsg.m0005'));
-      }
+        }
+      });
+    }, (err) => {
+      this.toasterService.error(_.get(this.resourceService, 'messages.emsg.m0005'));
+    }
     );
   }
 

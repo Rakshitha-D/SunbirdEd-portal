@@ -9,8 +9,9 @@ import { TelemetryService, IImpressionEventInput, IInteractEventObject, IInterac
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-enroll-batch',
-  templateUrl: './enroll-batch.component.html'
+    selector: 'app-enroll-batch',
+    templateUrl: './enroll-batch.component.html',
+    standalone: false
 })
 export class EnrollBatchComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('enrollBatch') enrollBatch;

@@ -14,8 +14,9 @@ import { Subject } from 'rxjs';
  * calls the reject API to reject the content
  */
 @Component({
-  selector: 'app-request-changes-popup',
-  templateUrl: './request-changes-popup.component.html'
+    selector: 'app-request-changes-popup',
+    templateUrl: './request-changes-popup.component.html',
+    standalone: false
 })
 export class RequestChangesPopupComponent implements OnInit, OnDestroy {
   @ViewChild('modal') modal;

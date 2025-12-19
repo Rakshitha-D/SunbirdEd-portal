@@ -10,9 +10,10 @@ import { PopupControlService } from '../../../../service/popup-control.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-global-consent-pii',
-  templateUrl: './global-consent-pii.component.html',
-  styleUrls: ['./global-consent-pii.component.scss']
+    selector: 'app-global-consent-pii',
+    templateUrl: './global-consent-pii.component.html',
+    styleUrls: ['./global-consent-pii.component.scss'],
+    standalone: false
 })
 export class GlobalConsentPiiComponent implements OnInit {
 

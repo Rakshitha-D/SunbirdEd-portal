@@ -13,9 +13,10 @@ import { DiscussionService } from '../../../discussion/services/discussion/discu
 import { DiscussionTelemetryService } from '../../../shared/services/discussion-telemetry/discussion-telemetry.service';
 import { UPDATE_GROUP, SELECT_DELETE, SELECT_DEACTIVATE, SELECT_NO, DELETE_SUCCESS } from '../../interfaces/telemetryConstants';
 @Component({
-  selector: 'app-group-header',
-  templateUrl: './group-header.component.html',
-  styleUrls: ['./group-header.component.scss']
+    selector: 'app-group-header',
+    templateUrl: './group-header.component.html',
+    styleUrls: ['./group-header.component.scss'],
+    standalone: false
 })
 export class GroupHeaderComponent implements OnInit, OnDestroy {
   dropdownContent = true;

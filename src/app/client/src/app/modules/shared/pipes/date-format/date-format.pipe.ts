@@ -6,7 +6,8 @@ import dayjs from 'dayjs';
  *
  */
 @Pipe({
-  name: 'dateFormat'
+    name: 'dateFormat',
+    standalone: false
 })
 export class DateFormatPipe implements PipeTransform {
   /**

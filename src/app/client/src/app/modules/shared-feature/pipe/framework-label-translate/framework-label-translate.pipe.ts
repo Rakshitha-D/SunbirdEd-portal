@@ -3,7 +3,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { ResourceService } from '@sunbird/shared';
 
 @Pipe({
-  name: 'frameworkCatLabelTranslate'
+    name: 'frameworkCatLabelTranslate',
+    standalone: false
 })
 export class FrameworkCatLabelTranslatePipe implements PipeTransform {
 

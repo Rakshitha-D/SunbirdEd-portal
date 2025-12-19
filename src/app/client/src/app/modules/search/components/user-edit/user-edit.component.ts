@@ -10,9 +10,10 @@ import { ProfileService } from '@sunbird/profile';
 import * as _ from 'lodash-es';
 
 @Component({
-  selector: 'app-user-edit',
-  templateUrl: './user-edit.component.html',
-  styleUrls: ['./user-edit-component.scss']
+    selector: 'app-user-edit',
+    templateUrl: './user-edit.component.html',
+    styleUrls: ['./user-edit-component.scss'],
+    standalone: false
 })
 export class UserEditComponent implements OnInit, OnDestroy, AfterViewInit {
 

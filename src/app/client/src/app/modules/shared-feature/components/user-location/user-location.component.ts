@@ -11,9 +11,10 @@ import {forkJoin, of} from 'rxjs';
 import { PopupControlService } from '../../../../service/popup-control.service';
 
 @Component({
-  selector: 'app-user-location',
-  templateUrl: './user-location.component.html',
-  styleUrls: ['./user-location.component.scss']
+    selector: 'app-user-location',
+    templateUrl: './user-location.component.html',
+    styleUrls: ['./user-location.component.scss'],
+    standalone: false
 })
 export class UserLocationComponent implements OnInit, OnDestroy, AfterViewInit {
 

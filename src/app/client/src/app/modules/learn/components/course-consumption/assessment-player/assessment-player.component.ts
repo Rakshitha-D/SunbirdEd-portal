@@ -20,9 +20,10 @@ import { result } from 'lodash';
 const ACCESSEVENT = 'renderer:question:submitscore';
 
 @Component({
-  selector: 'app-assessment-player',
-  templateUrl: './assessment-player.component.html',
-  styleUrls: ['./assessment-player.component.scss']
+    selector: 'app-assessment-player',
+    templateUrl: './assessment-player.component.html',
+    styleUrls: ['./assessment-player.component.scss'],
+    standalone: false
 })
 export class AssessmentPlayerComponent implements OnInit, OnDestroy, ComponentCanDeactivate {
 

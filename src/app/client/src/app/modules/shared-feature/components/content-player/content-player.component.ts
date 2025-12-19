@@ -16,9 +16,10 @@ import { CsGroupAddableBloc } from '@project-sunbird/client-services/blocs';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-content-player',
-  templateUrl: './content-player.component.html',
-  styleUrls: ['./content-player.component.scss']
+    selector: 'app-content-player',
+    templateUrl: './content-player.component.html',
+    styleUrls: ['./content-player.component.scss'],
+    standalone: false
 })
 
 export class ContentPlayerComponent implements OnInit, AfterViewInit, OnDestroy, ComponentCanDeactivate {

@@ -8,9 +8,10 @@ import { Subject } from 'rxjs';
 import dayjs from 'dayjs';
 
 @Component({
-  selector: 'app-batch-info',
-  templateUrl: './batch-info.component.html',
-  styleUrls: ['./batch-info.component.scss']
+    selector: 'app-batch-info',
+    templateUrl: './batch-info.component.html',
+    styleUrls: ['./batch-info.component.scss'],
+    standalone: false
 })
 export class BatchInfoComponent implements OnInit, OnDestroy {
 

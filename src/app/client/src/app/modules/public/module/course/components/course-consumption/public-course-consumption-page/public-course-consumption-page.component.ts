@@ -13,8 +13,9 @@ import { ContentManagerService } from '../../../../offline/services/content-mana
 import dayjs from 'dayjs';
 
 @Component({
-  templateUrl: './public-course-consumption-page.component.html',
-  styleUrls: ['./public-course-consumption-page.component.scss']
+    templateUrl: './public-course-consumption-page.component.html',
+    styleUrls: ['./public-course-consumption-page.component.scss'],
+    standalone: false
 })
 export class PublicCourseConsumptionPageComponent implements OnInit, OnDestroy {
   public courseId: string;

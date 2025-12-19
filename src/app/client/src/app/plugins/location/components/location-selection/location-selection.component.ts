@@ -9,12 +9,13 @@ import { IDeviceProfile } from '../../../../modules/shared-feature/interfaces/de
 import { SbFormLocationSelectionDelegate } from '../delegate/sb-form-location-selection.delegate';
 import { MatDialog } from '@angular/material/dialog';
 import * as _ from 'lodash-es';
-import {Location as SbLocation} from '@project-sunbird/client-services/models/location';
+import { Location as SbLocation } from '@project-sunbird/client-services/models/location';
 
 @Component({
   selector: 'app-location-selection',
   templateUrl: './location-selection.component.html',
-  styleUrls: ['./location-selection.component.scss']
+  styleUrls: ['./location-selection.component.scss'],
+  standalone: false
 })
 export class LocationSelectionComponent implements OnInit, OnDestroy, AfterViewInit {
   @Input() isClosable = true;
@@ -61,13 +62,13 @@ export class LocationSelectionComponent implements OnInit, OnDestroy, AfterViewI
     /**
       * @description - popupcontrol service returned value is used to enable/disable the location popup based on the isvisible value
     */
-    this.popupControlService.getOnboardingData().subscribe((formResponsedata)=>{
-      this.isLocationEnabled= formResponsedata?.locationPopup? formResponsedata?.locationPopup?.isVisible : true;
+    this.popupControlService.getOnboardingData().subscribe((formResponsedata) => {
+      this.isLocationEnabled = formResponsedata?.locationPopup ? formResponsedata?.locationPopup?.isVisible : true;
     })
-    this.sbFormLocationSelectionDelegate.init(this.deviceProfile, this.showModal, this.isStepper )
+    this.sbFormLocationSelectionDelegate.init(this.deviceProfile, this.showModal, this.isStepper)
       .catch(() => {
         this.closeModal();
-        if(this.isLocationEnabled){
+        if (this.isLocationEnabled) {
           this.toasterService.error(this.resourceService.messages.fmsg.m0049);
         }
       });
@@ -83,7 +84,7 @@ export class LocationSelectionComponent implements OnInit, OnDestroy, AfterViewI
         context: {
           env: 'user-location',
           cdata: [{ id: 'user:state:districtConfirmation', type: 'Feature' },
-            { id: 'SH-40', type: 'Task' }
+          { id: 'SH-40', type: 'Task' }
           ]
         },
         edata: {
@@ -100,20 +101,20 @@ export class LocationSelectionComponent implements OnInit, OnDestroy, AfterViewI
     const dialogRef = this.matDialog.getDialogById(this.locationSelectionModalId);
     dialogRef && dialogRef.close();
     this.popupControlService.changePopupStatus(true);
-    this.close.emit({isSubmitted: this.isSubmitted});
+    this.close.emit({ isSubmitted: this.isSubmitted });
   }
 
   async updateUserLocation() {
     if (this.showModal) {
       try {
         const result: any = await this.sbFormLocationSelectionDelegate.updateUserLocation();
-  
+
         /* istanbul ignore else */
         if (result.userProfile) {
           this.telemetryLogEvents('User Profile', result.userProfile === 'success');
           this.utilService.updateRoleChange(result.type);
         }
-  
+
         /* istanbul ignore else */
         if (result.deviceProfile) {
           if (!result.type) {
@@ -121,7 +122,7 @@ export class LocationSelectionComponent implements OnInit, OnDestroy, AfterViewI
           }
           this.telemetryLogEvents('Device Profile', result.userProfile === 'success');
         }
-  
+
         this.generateSubmitInteractEvent(result.changes);
       } catch (e) {
         this.toasterService.error(this.resourceService.messages.fmsg.m0049);

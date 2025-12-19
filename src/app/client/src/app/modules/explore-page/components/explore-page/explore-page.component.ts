@@ -21,7 +21,8 @@ import { CslFrameworkService } from '../../../public/services/csl-framework/csl-
 @Component({
     selector: 'app-explore-page-component',
     templateUrl: './explore-page.component.html',
-    styleUrls: ['./explore-page.component.scss']
+    styleUrls: ['./explore-page.component.scss'],
+    standalone: false
 })
 export class ExplorePageComponent implements OnInit, OnDestroy, AfterViewInit {
     public initFilter = false;

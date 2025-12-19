@@ -3,11 +3,12 @@ import {ResourceService} from '../../services';
 import {Router} from '@angular/router';
 import {IInteractEventEdata} from '@sunbird/telemetry';
 import {HttpOptions} from '@sunbird/shared';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-account-merge-modal',
-  templateUrl: './account-merge-modal.component.html'
+    selector: 'app-account-merge-modal',
+    templateUrl: './account-merge-modal.component.html',
+    standalone: false
 })
 export class AccountMergeModalComponent implements OnInit, OnDestroy {
   @Output() closeAccountMergeModal = new EventEmitter<any>();

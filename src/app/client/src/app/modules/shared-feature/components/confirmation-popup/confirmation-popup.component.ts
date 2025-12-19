@@ -1,9 +1,10 @@
 import { Component, OnInit, ViewChild, Output, EventEmitter, Input, HostListener } from '@angular/core';
 import { ResourceService } from '@sunbird/shared';
 @Component({
-  selector: 'app-confirmation-popup',
-  templateUrl: './confirmation-popup.component.html',
-  styleUrls: ['./confirmation-popup.component.scss']
+    selector: 'app-confirmation-popup',
+    templateUrl: './confirmation-popup.component.html',
+    styleUrls: ['./confirmation-popup.component.scss'],
+    standalone: false
 })
 export class ConfirmationPopupComponent implements OnInit {
   @ViewChild('confirmationModal', {static: true}) confirmationModal;

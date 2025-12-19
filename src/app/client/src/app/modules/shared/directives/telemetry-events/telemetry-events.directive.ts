@@ -7,7 +7,8 @@ import { UtilService } from '../../services/util/util.service';
  * https://medium.com/claritydesignsystem/four-ways-of-listening-to-dom-events-in-angular-part-3-renderer2-listen-14c6fe052b59
  */
 @Directive({
-  selector: '[telemetryEventsButton]'
+    selector: '[telemetryEventsButton]',
+    standalone: false
 })
 
 export class TelemetryEventsDirective implements OnInit, OnDestroy {

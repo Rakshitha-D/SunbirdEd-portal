@@ -7,7 +7,8 @@ import * as _ from 'lodash-es';
  * TelemetryInteract Directive
  */
 @Directive({
-  selector: '[appTelemetryInteract]'
+    selector: '[appTelemetryInteract]',
+    standalone: false
 })
 export class TelemetryInteractDirective {
   /**

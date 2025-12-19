@@ -6,9 +6,10 @@ import { ProfileService } from '@sunbird/profile';
 import { IInteractEventObject } from '@sunbird/telemetry';
 
 @Component({
-  selector: 'app-certificate-name-update-popup',
-  templateUrl: './certificate-name-update-popup.component.html',
-  styleUrls: ['./certificate-name-update-popup.component.scss']
+    selector: 'app-certificate-name-update-popup',
+    templateUrl: './certificate-name-update-popup.component.html',
+    styleUrls: ['./certificate-name-update-popup.component.scss'],
+    standalone: false
 })
 export class CertificateNameUpdatePopupComponent implements OnInit, OnDestroy {
   @Input() showProfileUpdatePopup;

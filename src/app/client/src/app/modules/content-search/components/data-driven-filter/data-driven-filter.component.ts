@@ -11,9 +11,10 @@ import { IInteractEventEdata } from '@sunbird/telemetry';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-data-driven-filter',
-  templateUrl: './data-driven-filter.component.html',
-  styleUrls: ['./data-driven-filter.component.scss']
+    selector: 'app-data-driven-filter',
+    templateUrl: './data-driven-filter.component.html',
+    styleUrls: ['./data-driven-filter.component.scss'],
+    standalone: false
 })
 export class DataDrivenFilterComponent implements OnInit, OnChanges, OnDestroy {
   @Input() filterEnv: string;

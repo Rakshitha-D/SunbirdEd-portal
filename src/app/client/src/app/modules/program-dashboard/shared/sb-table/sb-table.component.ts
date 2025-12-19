@@ -3,9 +3,10 @@ import * as _ from "lodash-es";
 import { PdServiceService } from '../services/pd-service/pd-service.service';
 import { ResourceService } from '@sunbird/shared';
 @Component({
-  selector: 'app-sb-table',
-  templateUrl: './sb-table.component.html',
-  styleUrls: ['./sb-table.component.scss']
+    selector: 'app-sb-table',
+    templateUrl: './sb-table.component.html',
+    styleUrls: ['./sb-table.component.scss'],
+    standalone: false
 })
 export class SbTableComponent implements OnInit, OnChanges {
   @Input() table;

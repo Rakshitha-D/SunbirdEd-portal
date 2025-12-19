@@ -19,9 +19,10 @@ import { Subject } from 'rxjs';
  * Display course consumption dashboard
  */
 @Component({
-  selector: 'app-course-consumption',
-  templateUrl: './course-consumption.component.html',
-  styleUrls: ['./course-consumption.component.scss']
+    selector: 'app-course-consumption',
+    templateUrl: './course-consumption.component.html',
+    styleUrls: ['./course-consumption.component.scss'],
+    standalone: false
 })
 export class CourseConsumptionComponent implements OnDestroy, AfterViewInit {
   /**

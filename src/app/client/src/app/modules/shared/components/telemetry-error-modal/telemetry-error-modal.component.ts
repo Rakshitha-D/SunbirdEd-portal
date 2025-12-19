@@ -8,9 +8,10 @@ import { TelemetryService } from '@sunbird/telemetry';
  * document.dispatchEvent(new CustomEvent('TelemetryEvent:show', {detail: {show: true}}));
  */
 @Component({
-  selector: 'app-telemetry-error-modal',
-  templateUrl: './telemetry-error-modal.component.html',
-  styleUrls: ['./telemetry-error-modal.component.scss']
+    selector: 'app-telemetry-error-modal',
+    templateUrl: './telemetry-error-modal.component.html',
+    styleUrls: ['./telemetry-error-modal.component.scss'],
+    standalone: false
 })
 export class TelemetryErrorModalComponent implements OnInit {
 

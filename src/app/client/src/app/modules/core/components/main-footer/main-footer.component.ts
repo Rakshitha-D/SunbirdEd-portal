@@ -18,9 +18,10 @@ import * as _ from 'lodash-es';
 import {UserService, TenantService} from './../../services';
 import { takeUntil } from 'rxjs/operators';
 @Component({
-  selector: 'app-footer',
-  templateUrl: './main-footer.component.html',
-  styleUrls: ['./main-footer.component.scss']
+    selector: 'app-footer',
+    templateUrl: './main-footer.component.html',
+    styleUrls: ['./main-footer.component.scss'],
+    standalone: false
 })
 export class MainFooterComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() layoutConfiguration;

@@ -9,9 +9,10 @@ import { TelemetryService } from '@sunbird/telemetry';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-content-type',
-  templateUrl: './content-type.component.html',
-  styleUrls: ['./content-type.component.scss'],
+    selector: 'app-content-type',
+    templateUrl: './content-type.component.html',
+    styleUrls: ['./content-type.component.scss'],
+    standalone: false
 })
 export class ContentTypeComponent implements OnInit, OnDestroy {
   @Output() closeSideMenu = new EventEmitter<any>();

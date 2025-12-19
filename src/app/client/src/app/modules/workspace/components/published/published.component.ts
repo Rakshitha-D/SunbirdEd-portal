@@ -26,9 +26,10 @@ import { SuiModalService, TemplateModalConfig, ModalTemplate } from '@project-su
 */
 
 @Component({
-  selector: 'app-published',
-  templateUrl: './published.component.html',
-  styleUrls: ['./published.component.scss']
+    selector: 'app-published',
+    templateUrl: './published.component.html',
+    styleUrls: ['./published.component.scss'],
+    standalone: false
 })
 export class PublishedComponent extends WorkSpace implements OnInit, AfterViewInit {
   @ViewChild('modalTemplate')

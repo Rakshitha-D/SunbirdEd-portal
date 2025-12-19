@@ -14,9 +14,10 @@ import { CONTENT_CATEGORIES, SELECT_CATEGORY } from '../../../interfaces/telemet
 
 
 @Component({
-  selector: 'app-add-activity-content-types',
-  templateUrl: './add-activity-content-types.component.html',
-  styleUrls: ['./add-activity-content-types.component.scss']
+    selector: 'app-add-activity-content-types',
+    templateUrl: './add-activity-content-types.component.html',
+    styleUrls: ['./add-activity-content-types.component.scss'],
+    standalone: false
 })
 export class AddActivityContentTypesComponent implements OnInit, AfterViewInit, OnDestroy {
   unsubscribe$ = new Subject<void>();

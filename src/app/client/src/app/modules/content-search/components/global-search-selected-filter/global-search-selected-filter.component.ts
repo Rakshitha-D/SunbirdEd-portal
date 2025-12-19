@@ -6,9 +6,10 @@ import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs/internal/Subject';
 
 @Component({
-  selector: 'app-global-search-selected-filter',
-  templateUrl: './global-search-selected-filter.component.html',
-  styleUrls: ['./global-search-selected-filter.component.scss']
+    selector: 'app-global-search-selected-filter',
+    templateUrl: './global-search-selected-filter.component.html',
+    styleUrls: ['./global-search-selected-filter.component.scss'],
+    standalone: false
 })
 export class GlobalSearchSelectedFilterComponent implements OnInit {
   @Input() facets: { name: string, label: string, index: string, placeholder: string, values: { name: string, count?: number }[] }[];

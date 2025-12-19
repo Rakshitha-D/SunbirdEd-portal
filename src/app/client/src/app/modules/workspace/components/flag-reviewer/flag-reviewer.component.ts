@@ -19,8 +19,9 @@ import { CslFrameworkService } from '../../../public/services/csl-framework/csl-
  * The  FlagReviewerComponent search for all the flag-reviewer
 */
 @Component({
-  selector: 'app-flag-reviewer',
-  templateUrl: './flag-reviewer.component.html'
+    selector: 'app-flag-reviewer',
+    templateUrl: './flag-reviewer.component.html',
+    standalone: false
 })
 export class FlagReviewerComponent extends WorkSpace implements OnInit, AfterViewInit {
   /**

@@ -22,7 +22,8 @@ import { ProfileService } from './../../services';
 @Component({
   selector: 'app-submit-teacher-details',
   templateUrl: './submit-teacher-details.component.html',
-  styleUrls: ['./submit-teacher-details.component.scss']
+  styleUrls: ['./submit-teacher-details.component.scss'],
+  standalone: false
 })
 export class SubmitTeacherDetailsComponent implements OnInit, OnDestroy {
 
@@ -106,8 +107,10 @@ export class SubmitTeacherDetailsComponent implements OnInit, OnDestroy {
       });
 
     this.instance = _.upperCase(this.resourceService.instance || 'SUNBIRD');
-    this.consentConfig = { tncLink: this.resourceService.frmelmnts.lbl.tncLabelLink,
-       tncText: this.resourceService.frmelmnts.lbl.nonCustodianTC };
+    this.consentConfig = {
+      tncLink: this.resourceService.frmelmnts.lbl.tncLabelLink,
+      tncText: this.resourceService.frmelmnts.lbl.nonCustodianTC
+    };
     this.fetchTncData();
     const queryParams = this.activatedRoute.snapshot.queryParams;
     this.formAction = queryParams.formaction;
@@ -606,7 +609,7 @@ export class SubmitTeacherDetailsComponent implements OnInit, OnDestroy {
       this.csUserService.updateConsent(requestFoRevoked, { apiPath: '/learner/user/v1' })
         .pipe(takeUntil(this.unsubscribe))
         .subscribe((response) => {
-         // this.toasterService.success(_.get(this.resourceService, 'messages.smsg.dataSettingSubmitted'));
+          // this.toasterService.success(_.get(this.resourceService, 'messages.smsg.dataSettingSubmitted'));
           if (response && response.consent) {
             this.isTenantChanged = false;
             const requestForActive: Consent = {

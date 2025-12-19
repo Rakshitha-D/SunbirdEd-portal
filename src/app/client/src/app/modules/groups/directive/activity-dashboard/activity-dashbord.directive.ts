@@ -6,7 +6,8 @@ import { GroupsService } from '../../services/groups/groups.service';
 import { ActivityDashboardService } from '../../../shared/services/activity-dashboard/activity-dashboard.service';
 
 @Directive({
-  selector: '[appActivityDashboard]'
+    selector: '[appActivityDashboard]',
+    standalone: false
 })
 export class ActivityDashboardDirective implements OnInit {
   @Input() hierarchyData: any;

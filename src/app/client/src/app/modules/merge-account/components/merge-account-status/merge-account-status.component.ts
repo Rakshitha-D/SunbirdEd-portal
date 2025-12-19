@@ -5,9 +5,10 @@ import {Subscription} from 'rxjs';
 import {TenantService} from '@sunbird/core';
 
 @Component({
-  selector: 'app-merge-account-status',
-  templateUrl: './merge-account-status.component.html',
-  styleUrls: ['./merge-account-status.component.scss']
+    selector: 'app-merge-account-status',
+    templateUrl: './merge-account-status.component.html',
+    styleUrls: ['./merge-account-status.component.scss'],
+    standalone: false
 })
 export class MergeAccountStatusComponent implements OnInit, OnDestroy {
   @ViewChild('modal') modal;

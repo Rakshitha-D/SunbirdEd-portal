@@ -34,9 +34,10 @@ export interface ResourceAPIRequestBody{
   districtLocationId?:string
 }
 @Component({
-  selector: 'app-datasets',
-  templateUrl: './program-datasets.component.html',
-  styleUrls: ['./program-datasets.component.scss'],
+    selector: 'app-datasets',
+    templateUrl: './program-datasets.component.html',
+    styleUrls: ['./program-datasets.component.scss'],
+    standalone: false
 })
 export class DatasetsComponent implements OnInit, OnDestroy {
   public activatedRoute: ActivatedRoute;

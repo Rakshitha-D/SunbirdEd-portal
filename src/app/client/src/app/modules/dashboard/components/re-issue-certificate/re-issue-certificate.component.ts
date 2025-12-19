@@ -8,9 +8,10 @@ import * as _ from 'lodash-es';
 import { IUserCertificate } from '../../interfaces';
 import { takeUntil } from 'rxjs/operators';
 @Component({
-  selector: 'app-re-issue-certificate',
-  templateUrl: './re-issue-certificate.component.html',
-  styleUrls: ['./re-issue-certificate.component.scss']
+    selector: 'app-re-issue-certificate',
+    templateUrl: './re-issue-certificate.component.html',
+    styleUrls: ['./re-issue-certificate.component.scss'],
+    standalone: false
 })
 export class ReIssueCertificateComponent implements OnInit, OnDestroy {
   @ViewChild('searchBtn') button;

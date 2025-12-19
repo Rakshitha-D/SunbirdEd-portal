@@ -3,9 +3,10 @@ import { Subscription, fromEvent, timer } from 'rxjs';
 import { debounceTime, throttleTime } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-slick',
-  templateUrl: './slick.component.html',
-  styleUrls: ['./slick.component.scss']
+    selector: 'app-slick',
+    templateUrl: './slick.component.html',
+    styleUrls: ['./slick.component.scss'],
+    standalone: false
 })
 export class SlickComponent implements OnInit {
 

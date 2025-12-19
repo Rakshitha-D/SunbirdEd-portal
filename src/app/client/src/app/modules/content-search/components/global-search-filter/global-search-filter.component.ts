@@ -22,9 +22,10 @@ import { CacheService } from '../../../shared/services/cache-service/cache.servi
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-global-search-filter',
-  templateUrl: './global-search-filter.component.html',
-  styleUrls: ['./global-search-filter.component.scss']
+    selector: 'app-global-search-filter',
+    templateUrl: './global-search-filter.component.html',
+    styleUrls: ['./global-search-filter.component.scss'],
+    standalone: false
 })
 export class GlobalSearchFilterComponent implements OnInit, OnChanges, OnDestroy {
   @Input() facets;

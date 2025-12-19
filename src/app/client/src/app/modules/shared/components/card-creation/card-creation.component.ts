@@ -4,9 +4,10 @@ import { ICard } from '../../interfaces';
 import {IInteractEventObject, IInteractEventEdata } from '@sunbird/telemetry';
 import * as _ from 'lodash-es';
 @Component({
-  selector: 'app-card-creation',
-  templateUrl: './card-creation.component.html',
-  styleUrls: ['./card-creation.component.scss']
+    selector: 'app-card-creation',
+    templateUrl: './card-creation.component.html',
+    styleUrls: ['./card-creation.component.scss'],
+    standalone: false
 })
 export class CardCreationComponent implements OnInit {
   /**

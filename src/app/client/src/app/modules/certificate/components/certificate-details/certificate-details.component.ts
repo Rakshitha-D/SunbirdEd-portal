@@ -10,9 +10,10 @@ import { Subscription} from 'rxjs';
 import { CsCertificateService } from '@project-sunbird/client-services/services/certificate/interface';
 
 @Component({
-  selector: 'app-certificate-details',
-  templateUrl: './certificate-details.component.html',
-  styleUrls: ['./certificate-details.component.scss']
+    selector: 'app-certificate-details',
+    templateUrl: './certificate-details.component.html',
+    styleUrls: ['./certificate-details.component.scss'],
+    standalone: false
 })
 export class CertificateDetailsComponent implements OnInit , OnDestroy {
   loader: boolean;

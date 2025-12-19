@@ -6,9 +6,10 @@ import * as _ from 'lodash-es';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-course-completion',
-  templateUrl: './course-completion.component.html',
-  styleUrls: ['./course-completion.component.scss']
+    selector: 'app-course-completion',
+    templateUrl: './course-completion.component.html',
+    styleUrls: ['./course-completion.component.scss'],
+    standalone: false
 })
 export class CourseCompletionComponent implements OnDestroy {
 

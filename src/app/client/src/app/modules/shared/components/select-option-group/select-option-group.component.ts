@@ -2,9 +2,10 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import * as _ from 'lodash-es';
 
 @Component({
-  selector: 'app-select-option-group',
-  templateUrl: './select-option-group.component.html',
-  styleUrls: ['./select-option-group.component.scss']
+    selector: 'app-select-option-group',
+    templateUrl: './select-option-group.component.html',
+    styleUrls: ['./select-option-group.component.scss'],
+    standalone: false
 })
 export class SelectOptionGroupComponent implements OnInit {
   @Input() optionData: Array<{}>;

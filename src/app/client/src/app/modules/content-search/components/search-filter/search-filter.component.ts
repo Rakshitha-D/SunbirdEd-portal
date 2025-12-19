@@ -14,9 +14,10 @@ import { CacheService } from '../../../shared/services/cache-service/cache.servi
 import { CslFrameworkService } from  '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-search-filter',
-  templateUrl: './search-filter.component.html',
-  styleUrls: ['./search-filter.component.scss']
+    selector: 'app-search-filter',
+    templateUrl: './search-filter.component.html',
+    styleUrls: ['./search-filter.component.scss'],
+    standalone: false
 })
 export class SearchFilterComponent implements OnInit, OnDestroy {
   public filterLayout = LibraryFiltersLayout;

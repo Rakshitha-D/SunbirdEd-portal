@@ -1,6 +1,8 @@
 import { ConfigService, NavigationHelperService, UtilService } from '@sunbird/shared';
-import { Component, AfterViewInit, ViewChild, ElementRef, Input, Output, EventEmitter,
-OnChanges, HostListener, OnInit, ChangeDetectorRef } from '@angular/core';
+import {
+  Component, AfterViewInit, ViewChild, ElementRef, Input, Output, EventEmitter,
+  OnChanges, HostListener, OnInit, ChangeDetectorRef
+} from '@angular/core';
 import * as _ from 'lodash-es';
 import { PlayerConfig } from '@sunbird/shared';
 import { Router } from '@angular/router';
@@ -19,7 +21,8 @@ import { PublicPlayerService } from '@sunbird/public';
 @Component({
   selector: 'app-player',
   templateUrl: './player.component.html',
-  styleUrls: ['./player.component.scss']
+  styleUrls: ['./player.component.scss'],
+  standalone: false
 })
 export class PlayerComponent implements OnInit, AfterViewInit, OnChanges, OnDestroy {
   @Input() playerConfig: PlayerConfig;
@@ -66,7 +69,7 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnChanges, OnDest
   isDesktopApp = false;
   showQumlPlayer = false;
   contentId: string;
-  collectionId:string;
+  collectionId: string;
 
   /**
  * Dom element reference of contentRatingModal
@@ -94,9 +97,9 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnChanges, OnDest
   @HostListener('window:orientationchange', ['$event'])
   public handleOrientationChange() {
     const screenType = _.get(screen, 'orientation.type');
-      if ( screenType === 'portrait-primary' || screenType === 'portrait-secondary' ) {
-        this.closeFullscreen();
-      }
+    if (screenType === 'portrait-primary' || screenType === 'portrait-secondary') {
+      this.closeFullscreen();
+    }
   }
 
   ngOnInit() {
@@ -121,7 +124,7 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnChanges, OnDest
     // Check for loggedIn user; and append user data to context object
     // User data (`firstName` and `lastName`) is used to show at the end of quiz
     if (this.playerConfig) {
-        this.addUserDataToContext();
+      this.addUserDataToContext();
     }
     this.isMobileOrTab = this.deviceDetectorService.isMobile() || this.deviceDetectorService.isTablet();
     if (this.isSingleContent === false) {
@@ -129,22 +132,22 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnChanges, OnDest
     }
     this.setTelemetryData();
     this.navigationHelperService.contentFullScreenEvent.
-    pipe(takeUntil(this.unsubscribe)).subscribe(isFullScreen => {
-      this.isFullScreenView = isFullScreen;
-      const root: HTMLElement = document.getElementsByTagName( 'html' )[0];
-      if (isFullScreen) {
-        root.classList.add('PlayerMediaQueryClass');
-        document.body.classList.add('o-y-hidden');
-      } else {
-        root.classList.remove('PlayerMediaQueryClass');
-        document.body.classList.remove('o-y-hidden');
-      }
-      if (this.isDesktopApp) {
-        const hideCM = isFullScreen ? true : false;
-        this.navigationHelperService.handleContentManagerOnFullscreen(hideCM);
-      }
-      this.loadPlayer();
-    });
+      pipe(takeUntil(this.unsubscribe)).subscribe(isFullScreen => {
+        this.isFullScreenView = isFullScreen;
+        const root: HTMLElement = document.getElementsByTagName('html')[0];
+        if (isFullScreen) {
+          root.classList.add('PlayerMediaQueryClass');
+          document.body.classList.add('o-y-hidden');
+        } else {
+          root.classList.remove('PlayerMediaQueryClass');
+          document.body.classList.remove('o-y-hidden');
+        }
+        if (this.isDesktopApp) {
+          const hideCM = isFullScreen ? true : false;
+          this.navigationHelperService.handleContentManagerOnFullscreen(hideCM);
+        }
+        this.loadPlayer();
+      });
 
     this.contentUtilsServiceService.contentShareEvent.pipe(takeUntil(this.unsubscribe)).subscribe(data => {
       if (this.isMobileOrTab && data === 'close') {
@@ -304,20 +307,20 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnChanges, OnDest
     if (downloadStatus && artifactUrl && !_.startsWith(artifactUrl, 'http://')) {
       this.playerConfig.metadata.artifactUrl = `${location.origin}/${artifactUrl}`;
     }
-    
+
     const defaults = {
-        'traceId': '13cba410-7ccb-46be-afc1-b1adcff303b1',
-        'sideMenu': {
-          'showDownload': true,
-          'showExit': true,
-          'showPrint': true,
-          'showReplay': true,
-          'showShare': true
-        }
+      'traceId': '13cba410-7ccb-46be-afc1-b1adcff303b1',
+      'sideMenu': {
+        'showDownload': true,
+        'showExit': true,
+        'showPrint': true,
+        'showReplay': true,
+        'showShare': true
       }
-    
+    }
+
     this.playerConfig['config'] = { ...this.playerConfig['config'], ...defaults };
-    
+
     this.addUserDataToContext();
     if (this.isMobileOrTab) {
       this.isFullScreenView = true;
@@ -506,8 +509,8 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnChanges, OnDest
         } else if (playVideo.msRequestFullscreen) { /* IE/Edge */
           playVideo.msRequestFullscreen();
         }
-        screen.orientation.lock('landscape');
-      } catch (error) {}
+        (screen.orientation as any).lock('landscape');
+      } catch (error) { }
     });
   }
 
@@ -534,7 +537,7 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnChanges, OnDest
         this.modal.showContentRatingModal = true;
       }
     }
-     /** to change the view of the content-details page */
+    /** to change the view of the content-details page */
     this.showPlayIcon = true;
     this.closePlayerEvent.emit();
   }
@@ -575,7 +578,7 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnChanges, OnDest
       }
     }
   }
-  
+
   public addUserDataToContext() {
     if (this.userService.loggedIn) {
       this.userService.userData$.subscribe((user: any) => {

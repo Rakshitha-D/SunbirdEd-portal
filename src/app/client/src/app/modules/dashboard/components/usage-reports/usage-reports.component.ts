@@ -17,9 +17,10 @@ import {Subject} from 'rxjs';
 import {first, takeUntil} from 'rxjs/operators';
 
 @Component({
-  selector: 'app-usage-reports',
-  templateUrl: './usage-reports.component.html',
-  styleUrls: ['./usage-reports.component.scss']
+    selector: 'app-usage-reports',
+    templateUrl: './usage-reports.component.html',
+    styleUrls: ['./usage-reports.component.scss'],
+    standalone: false
 })
 export class UsageReportsComponent implements OnInit, AfterViewInit {
   reportMetaData: any;

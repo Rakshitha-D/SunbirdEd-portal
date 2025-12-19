@@ -64,7 +64,7 @@ export class SearchService {
    */
   constructor(user: UserService, content: ContentService, config: ConfigService,
     learnerService: LearnerService, publicDataService: PublicDataService,
-    resourceService: ResourceService, private formService: FormService, public cslFrameworkService :CslFrameworkService, @Inject('CS_FRAMEWORK_SERVICE') private csFrameworkService: CsFrameworkService) {
+    resourceService: ResourceService, private formService: FormService, public cslFrameworkService: CslFrameworkService, @Inject('CS_FRAMEWORK_SERVICE') private csFrameworkService: CsFrameworkService) {
     this.frameworkCategories = this.cslFrameworkService.getFrameworkCategories();
     this.globalFilterCategoriesObject = this.cslFrameworkService.getGlobalFilterCategoriesObject();
     this.user = user;
@@ -294,7 +294,7 @@ export class SearchService {
   **/
   public updateOption(option: any) {
     this.globalFilterCategories = this.cslFrameworkService.getAlternativeCodeForFilter();
-    
+
     if (this.frameworkCategories && this.globalFilterCategories) {
       Object.keys(this.frameworkCategories).forEach((categoryKey, index) => {
         const categoryCode = this.frameworkCategories[categoryKey]?.code;
@@ -399,7 +399,7 @@ export class SearchService {
       filters['channel'] = request.channelId;
     }
     const option = {
-      limit: 100 || this.config.appConfig.SEARCH.PAGE_LIMIT,
+      limit: this.config.appConfig.SEARCH.PAGE_LIMIT || 100,
       filters: filters,
       // mode: 'soft',
       ...(facets ? { facets } : {}),
@@ -544,15 +544,15 @@ export class SearchService {
   /**
    * global User Search.
   */
- globalUserSearch(requestParam: SearchParam): Observable<ServerResponse> {
-  const option = {
-    url: this.config.urlConFig.URLS.ADMIN.USER_SEARCH,
-    data: {
-      request: {
-        filters: requestParam.filters,
+  globalUserSearch(requestParam: SearchParam): Observable<ServerResponse> {
+    const option = {
+      url: this.config.urlConFig.URLS.ADMIN.USER_SEARCH,
+      data: {
+        request: {
+          filters: requestParam.filters,
+        }
       }
-    }
-  };
-  return this.learnerService.post(option);
-}
+    };
+    return this.learnerService.post(option);
+  }
 }

@@ -10,8 +10,9 @@ import * as _ from 'lodash-es';
 import { Subject } from 'rxjs';
 import { TelemetryService, IInteractEventObject, IInteractEventEdata } from '@sunbird/telemetry';
 @Component({
-  selector: 'app-unenroll-batch',
-  templateUrl: './unenroll-batch.component.html'
+    selector: 'app-unenroll-batch',
+    templateUrl: './unenroll-batch.component.html',
+    standalone: false
 })
 export class UnEnrollBatchComponent implements OnInit, OnDestroy, AfterViewInit {
   batchId: string;

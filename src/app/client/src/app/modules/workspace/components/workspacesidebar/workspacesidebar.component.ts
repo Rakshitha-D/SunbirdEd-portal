@@ -7,8 +7,9 @@ import { WorkSpaceService } from './../../services';
  * The Workspace side  component shows the sidebar for workspace
  */
 @Component({
-  selector: 'app-workspacesidebar',
-  templateUrl: './workspacesidebar.component.html'
+    selector: 'app-workspacesidebar',
+    templateUrl: './workspacesidebar.component.html',
+    standalone: false
 })
 export class WorkspacesidebarComponent implements OnInit {
 

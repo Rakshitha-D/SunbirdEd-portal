@@ -10,9 +10,10 @@ import { UtilService } from '../../../../../shared/services/util/util.service';
 import { ElectronService } from '../../../../../core/services/electron/electron.service';
 import { ConfigService } from '../../../../../shared/services/config/config.service';
 @Component({
-  selector: 'app-explore-group',
-  templateUrl: './explore-group.component.html',
-  styleUrls: ['./explore-group.component.scss']
+    selector: 'app-explore-group',
+    templateUrl: './explore-group.component.html',
+    styleUrls: ['./explore-group.component.scss'],
+    standalone: false
 })
 export class ExploreGroupComponent implements OnInit {
   showWelcomePopup = true;

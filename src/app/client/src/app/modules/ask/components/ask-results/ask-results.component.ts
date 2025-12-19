@@ -8,9 +8,10 @@ import { Router } from '@angular/router';
  * Supports all 8 NLWeb tools: Search, Details, Ensemble, etc.
  */
 @Component({
-  selector: 'app-ask-results',
-  templateUrl: './ask-results.component.html',
-  styleUrls: ['./ask-results.component.scss']
+    selector: 'app-ask-results',
+    templateUrl: './ask-results.component.html',
+    styleUrls: ['./ask-results.component.scss'],
+    standalone: false
 })
 export class AskResultsComponent implements OnInit, OnDestroy {
   

@@ -5,8 +5,9 @@ import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-workspace',
-  templateUrl: './workspace.component.html'
+    selector: 'app-workspace',
+    templateUrl: './workspace.component.html',
+    standalone: false
 })
 export class WorkspaceComponent implements OnInit, OnDestroy {
   public unsubscribe$ = new Subject<void>();

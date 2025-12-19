@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from "@angular/core";
 import * as _ from "lodash-es";
 
 @Pipe({
-  name: "bigData",
+    name: "bigData",
+    standalone: false
 })
 export class BigDataPipe implements PipeTransform {
   transform(bigData: any, bigConfig?: object): unknown {

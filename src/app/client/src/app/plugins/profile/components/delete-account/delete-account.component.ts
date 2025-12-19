@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angu
 import { UntypedFormGroup } from '@angular/forms';
 import * as _ from 'lodash-es';
 import { UserService, OtpService } from '@sunbird/core';
-import { ResourceService, ServerResponse, ToasterService, ConfigService,CacheService } from '@sunbird/shared';
+import { ResourceService, ServerResponse, ToasterService, ConfigService, CacheService } from '@sunbird/shared';
 import { Subject } from 'rxjs';
 import { ProfileService } from '../../services';
 import { IInteractEventObject, IInteractEventEdata } from '@sunbird/telemetry';
@@ -12,7 +12,8 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 @Component({
   selector: 'app-delete-account',
   templateUrl: './delete-account.component.html',
-  styleUrls: ['./delete-account.component.scss']
+  styleUrls: ['./delete-account.component.scss'],
+  standalone: false
 })
 export class DeleteAccountComponent implements OnInit, OnDestroy {
   public unsubscribe = new Subject<void>();
@@ -21,7 +22,7 @@ export class DeleteAccountComponent implements OnInit, OnDestroy {
   @Output() close = new EventEmitter<any>();
   @Output() otpVerificationComplete = new EventEmitter<any>();
   @Input() dialogProps;
-  @Input() deepLink:string = ''
+  @Input() deepLink: string = ''
   contactTypeForm: UntypedFormGroup;
   enableSubmitBtn = false;
   showUniqueError = '';
@@ -35,7 +36,7 @@ export class DeleteAccountComponent implements OnInit, OnDestroy {
   constructor(public resourceService: ResourceService, public userService: UserService,
     public otpService: OtpService, public toasterService: ToasterService,
     public profileService: ProfileService, private matDialog: MatDialog,
-    public configService: ConfigService,private cacheService:CacheService,
+    public configService: ConfigService, private cacheService: CacheService,
     public deviceDetectorService: DeviceDetectorService) { }
 
   ngOnInit() {

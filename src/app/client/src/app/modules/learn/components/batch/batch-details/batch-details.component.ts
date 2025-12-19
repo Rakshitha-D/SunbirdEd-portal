@@ -12,9 +12,10 @@ import { Subject } from 'rxjs';
 import dayjs from 'dayjs';
 
 @Component({
-  selector: 'app-batch-details',
-  templateUrl: './batch-details.component.html',
-  styleUrls: ['batch-details.component.scss']
+    selector: 'app-batch-details',
+    templateUrl: './batch-details.component.html',
+    styleUrls: ['batch-details.component.scss'],
+    standalone: false
 })
 
 export class BatchDetailsComponent implements OnInit, OnDestroy {

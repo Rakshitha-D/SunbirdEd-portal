@@ -7,9 +7,10 @@ import {
 } from '@sunbird/shared';
 import { PlayerService, ContentService, PermissionService, UserService } from '@sunbird/core';
 @Component({
-  selector: 'app-flag-conentplayer',
-  templateUrl: './flag-conentplayer.component.html',
-  styleUrls: ['./flag-conentplayer.component.scss']
+    selector: 'app-flag-conentplayer',
+    templateUrl: './flag-conentplayer.component.html',
+    styleUrls: ['./flag-conentplayer.component.scss'],
+    standalone: false
 })
 export class FlagConentplayerComponent implements OnInit {
   /**

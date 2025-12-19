@@ -4,8 +4,9 @@ import {  Subject } from 'rxjs';
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { ContentBadgeService } from './../../services';
 @Component({
-  selector: 'app-content-badge',
-  templateUrl: './content-badge.component.html'
+    selector: 'app-content-badge',
+    templateUrl: './content-badge.component.html',
+    standalone: false
 })
 export class ContentBadgeComponent implements OnInit, OnDestroy {
   @Input() data: Array<object>;

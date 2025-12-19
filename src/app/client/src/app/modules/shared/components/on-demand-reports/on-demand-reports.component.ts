@@ -6,9 +6,10 @@ import {Validators, UntypedFormControl, UntypedFormGroup} from '@angular/forms';
 import {TelemetryService} from '@sunbird/telemetry';
 
 @Component({
-  selector: 'app-on-demand-reports',
-  templateUrl: './on-demand-reports.component.html',
-  styleUrls: ['./on-demand-reports.component.scss']
+    selector: 'app-on-demand-reports',
+    templateUrl: './on-demand-reports.component.html',
+    styleUrls: ['./on-demand-reports.component.scss'],
+    standalone: false
 })
 export class OnDemandReportsComponent implements OnInit {
 

@@ -2,8 +2,9 @@ import { ResourceService } from './../../services/resource/resource.service';
 import { Component, OnInit, ChangeDetectorRef, Input,  EventEmitter, Output } from '@angular/core';
 import * as _ from 'lodash-es';
 @Component({
-  selector: 'app-custom-multi-select',
-  templateUrl: './custom-multi-select.component.html'
+    selector: 'app-custom-multi-select',
+    templateUrl: './custom-multi-select.component.html',
+    standalone: false
 })
 export class CustomMultiSelectComponent implements OnInit {
   @Input() inputData: Array<string>;

@@ -2,7 +2,8 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 @Component({
     selector: 'entity-list',
     templateUrl: './entity-list.component.html',
-    styleUrls: ['./entity-list.component.scss']
+    styleUrls: ['./entity-list.component.scss'],
+    standalone: false
 })
 export class EntityListComponent implements OnInit {
     @Input() entities;

@@ -5,9 +5,10 @@ import * as _ from "lodash-es";
 import { PdServiceService } from '../services/pd-service/pd-service.service';
 import dayjs from 'dayjs';
 @Component({
-  selector: 'app-sb-bignumber',
-  templateUrl: './sb-bignumber.component.html',
-  styleUrls: ['./sb-bignumber.component.scss']
+    selector: 'app-sb-bignumber',
+    templateUrl: './sb-bignumber.component.html',
+    styleUrls: ['./sb-bignumber.component.scss'],
+    standalone: false
 })
 export class SbBignumberComponent implements OnInit, OnChanges {
   @Input() chart;

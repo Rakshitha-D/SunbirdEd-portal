@@ -2,7 +2,8 @@ import {Pipe, PipeTransform} from '@angular/core';
 import dayjs from 'dayjs';
 
 @Pipe({
-  name: 'sbDataTable'
+    name: 'sbDataTable',
+    standalone: false
 })
 export class SbDataTablePipe implements PipeTransform {
 

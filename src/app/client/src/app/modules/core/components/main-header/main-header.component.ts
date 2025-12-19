@@ -29,9 +29,10 @@ import { EXPLORE_GROUPS, MY_GROUPS } from '../../../public/module/group/componen
 type reportsListVersionType = 'v1' | 'v2';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './main-header.component.html',
-  styleUrls: ['./main-header.component.scss']
+    selector: 'app-header',
+    templateUrl: './main-header.component.html',
+    styleUrls: ['./main-header.component.scss'],
+    standalone: false
 })
 export class MainHeaderComponent implements OnInit, OnDestroy {
   @Input() routerEvents;

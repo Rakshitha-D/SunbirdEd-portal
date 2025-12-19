@@ -5,9 +5,10 @@ import { ContentData, ContentCreditsData } from '@sunbird/shared';
 import { fromEvent, Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-content-credits',
-  templateUrl: './content-credits.component.html',
-  styleUrls: ['./content-credits.component.scss']
+    selector: 'app-content-credits',
+    templateUrl: './content-credits.component.html',
+    styleUrls: ['./content-credits.component.scss'],
+    standalone: false
 })
 export class ContentCreditsComponent implements OnInit, OnChanges {
   @Input() contentData: ContentData;

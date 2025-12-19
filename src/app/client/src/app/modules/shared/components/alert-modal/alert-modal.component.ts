@@ -9,9 +9,10 @@ interface IAlertModalContext {
 }
 
 @Component({
-  selector: 'app-alert-modal',
-  templateUrl: './alert-modal.component.html',
-  styleUrls: ['./alert-modal.component.scss'],
+    selector: 'app-alert-modal',
+    templateUrl: './alert-modal.component.html',
+    styleUrls: ['./alert-modal.component.scss'],
+    standalone: false
 })
 export class AlertModalComponent {
   isChecked = false;

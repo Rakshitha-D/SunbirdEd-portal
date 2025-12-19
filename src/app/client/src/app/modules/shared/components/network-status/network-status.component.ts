@@ -4,9 +4,10 @@ import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-network-status',
-  templateUrl: './network-status.component.html',
-  styleUrls: ['./network-status.component.scss']
+    selector: 'app-network-status',
+    templateUrl: './network-status.component.html',
+    styleUrls: ['./network-status.component.scss'],
+    standalone: false
 })
 export class NetworkStatusComponent implements OnInit, OnDestroy {
   isConnected = false;

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 // Import the Ask components
 import { AskComponent } from './ask.component';
@@ -36,23 +36,17 @@ const routes: Routes = [
  * AskModule - Module for the Ask functionality
  * This module provides the Ask component, results display, and routing configuration
  */
-@NgModule({
-  declarations: [
-    AskComponent,
-    AskResultsComponent
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    HttpClientModule,
-    SharedModule,
-    TelemetryModule,
-    CoreModule,
-    RouterModule.forChild(routes)
-  ],
-  exports: [
-    AskComponent,
-    AskResultsComponent
-  ]
-})
+@NgModule({ declarations: [
+        AskComponent,
+        AskResultsComponent
+    ],
+    exports: [
+        AskComponent,
+        AskResultsComponent
+    ], imports: [CommonModule,
+        FormsModule,
+        SharedModule,
+        TelemetryModule,
+        CoreModule,
+        RouterModule.forChild(routes)], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AskModule { }

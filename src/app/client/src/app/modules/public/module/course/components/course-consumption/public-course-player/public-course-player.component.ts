@@ -16,9 +16,10 @@ import { ITelemetryShare, ContentUtilsServiceService } from '@sunbird/shared';
 import { CslFrameworkService } from '../../../../../services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-public-course-player',
-  templateUrl: './public-course-player.component.html',
-  styleUrls: ['./public-course-player.component.scss']
+    selector: 'app-public-course-player',
+    templateUrl: './public-course-player.component.html',
+    styleUrls: ['./public-course-player.component.scss'],
+    standalone: false
 })
 export class PublicCoursePlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   private courseId: string;

@@ -12,9 +12,10 @@ interface ConsentConfiguration{
   tncText:string
 }
 @Component({
-  selector: 'app-observation-details',
-  templateUrl: './observation-details.component.html',
-  styleUrls: ['./observation-details.component.scss'],
+    selector: 'app-observation-details',
+    templateUrl: './observation-details.component.html',
+    styleUrls: ['./observation-details.component.scss'],
+    standalone: false
 })
 export class ObservationDetailsComponent implements OnInit {
   config;

@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import * as _ from 'lodash-es';
 
 @Pipe({
-  name: 'cdnprefixurl'
+    name: 'cdnprefixurl',
+    standalone: false
 })
 export class CdnprefixPipe implements PipeTransform {
   cdnBaseUrl: string = (<HTMLInputElement>document.getElementById('cdnUrl')) ?

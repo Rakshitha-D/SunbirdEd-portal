@@ -17,8 +17,9 @@ import { ContentIDParam } from '../../interfaces/delteparam';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-all-textbooks',
-  templateUrl: './all-textbooks.component.html'
+    selector: 'app-all-textbooks',
+    templateUrl: './all-textbooks.component.html',
+    standalone: false
 })
 
 export class AllTextbooksComponent extends WorkSpace implements OnInit, AfterViewInit {

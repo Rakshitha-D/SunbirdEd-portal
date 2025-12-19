@@ -15,7 +15,8 @@ import {omit, groupBy, get, uniqBy, toLower, find, map as _map, forEach, each} f
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  templateUrl: './home-search.component.html'
+    templateUrl: './home-search.component.html',
+    standalone: false
 })
 export class HomeSearchComponent implements OnInit, OnDestroy, AfterViewInit {
 

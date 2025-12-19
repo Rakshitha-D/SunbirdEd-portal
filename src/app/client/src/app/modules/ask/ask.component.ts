@@ -12,9 +12,10 @@ import { takeUntil } from 'rxjs/operators';
  * This component provides a search interface and displays results using the ensemble tool
  */
 @Component({
-  selector: 'app-ask',
-  templateUrl: './ask.component.html',
-  styleUrls: ['./ask.component.scss']
+    selector: 'app-ask',
+    templateUrl: './ask.component.html',
+    styleUrls: ['./ask.component.scss'],
+    standalone: false
 })
 export class AskComponent implements OnInit, OnDestroy {
   

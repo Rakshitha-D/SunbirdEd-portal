@@ -11,9 +11,10 @@ import { CslFrameworkService } from '../../../../../public/services/csl-framewor
 
 const USER_DETAILS_KEY = 'guestUserDetails';
 @Component({
-  selector: 'app-guest-profile',
-  templateUrl: './guest-profile.component.html',
-  styleUrls: ['./guest-profile.component.scss']
+    selector: 'app-guest-profile',
+    templateUrl: './guest-profile.component.html',
+    styleUrls: ['./guest-profile.component.scss'],
+    standalone: false
 })
 
 export class GuestProfileComponent implements OnInit {

@@ -13,8 +13,9 @@ import * as _ from 'lodash-es';
  * This component also creates a unique process id on success upload of csv file
  */
 @Component({
-  selector: 'app-organization',
-  templateUrl: './organization-upload.component.html'
+    selector: 'app-organization',
+    templateUrl: './organization-upload.component.html',
+    standalone: false
 })
 export class OrganizationUploadComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('inputbtn') inputbtn: ElementRef;

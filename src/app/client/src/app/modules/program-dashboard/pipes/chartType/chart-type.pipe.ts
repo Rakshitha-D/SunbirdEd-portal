@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from "@angular/core";
 import * as _ from "lodash-es";
 
 @Pipe({
-  name: "chartType",
+    name: "chartType",
+    standalone: false
 })
 export class ChartTypePipe implements PipeTransform {
   transform(chartData: any): unknown {

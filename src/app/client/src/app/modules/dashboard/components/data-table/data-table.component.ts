@@ -10,7 +10,8 @@ import * as _ from 'lodash-es';
 @Component({
     selector: 'app-data-table',
     templateUrl: './data-table.component.html',
-    styleUrls: ['./data-table.component.scss']
+    styleUrls: ['./data-table.component.scss'],
+    standalone: false
 })
 export class DataTableComponent implements AfterViewInit {
     @Input() tableId: any;

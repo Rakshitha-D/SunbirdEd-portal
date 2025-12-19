@@ -9,8 +9,9 @@ import { IImpressionEventInput } from '@sunbird/telemetry';
 import { RecaptchaComponent } from 'ng-recaptcha';
 
 @Component({
-  templateUrl: './identify-account.component.html',
-  styleUrls: ['./identify-account.component.scss']
+    templateUrl: './identify-account.component.html',
+    styleUrls: ['./identify-account.component.scss'],
+    standalone: false
 })
 export class IdentifyAccountComponent implements OnInit {
 

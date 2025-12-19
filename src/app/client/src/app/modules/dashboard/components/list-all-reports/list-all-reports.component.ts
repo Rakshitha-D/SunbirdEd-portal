@@ -13,9 +13,10 @@ import 'datatables.net';
 import { Location } from '@angular/common';
 const reportsToExclude : string[] = ['program_dashboard'];
 @Component({
-  selector: 'app-list-all-reports',
-  templateUrl: './list-all-reports.component.html',
-  styleUrls: ['./list-all-reports.component.scss']
+    selector: 'app-list-all-reports',
+    templateUrl: './list-all-reports.component.html',
+    styleUrls: ['./list-all-reports.component.scss'],
+    standalone: false
 })
 export class ListAllReportsComponent implements OnInit {
   reports: any;

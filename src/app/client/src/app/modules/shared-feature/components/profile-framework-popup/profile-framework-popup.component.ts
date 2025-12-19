@@ -14,9 +14,10 @@ import { CslFrameworkService } from '../../../public/services/csl-framework/csl-
 import { ConfigService } from '../../../shared/services/config/config.service';
 
 @Component({
-  selector: 'app-popup',
-  templateUrl: './profile-framework-popup.component.html',
-  styleUrls: ['./profile-framework-popup.component.scss']
+    selector: 'app-popup',
+    templateUrl: './profile-framework-popup.component.html',
+    styleUrls: ['./profile-framework-popup.component.scss'],
+    standalone: false
 })
 export class ProfileFrameworkPopupComponent implements OnInit, OnDestroy {
   @Input() showCloseIcon: boolean;

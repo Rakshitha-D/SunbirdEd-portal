@@ -6,9 +6,10 @@ import { ContentData } from '@sunbird/shared';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-collection-player-metadata',
-  templateUrl: './collection-player-metadata.component.html',
-  styleUrls: ['./collection-player-metadata.component.scss']
+    selector: 'app-collection-player-metadata',
+    templateUrl: './collection-player-metadata.component.html',
+    styleUrls: ['./collection-player-metadata.component.scss'],
+    standalone: false
 })
 export class CollectionPlayerMetadataComponent implements OnInit {
   @Input() metaData: ContentData;

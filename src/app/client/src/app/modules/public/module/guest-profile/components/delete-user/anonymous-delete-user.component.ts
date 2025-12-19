@@ -9,9 +9,10 @@ import { Subject } from 'rxjs';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
-  selector: 'app-anonymous-delete-user',
-  templateUrl: './anonymous-delete-user.component.html',
-  styleUrls: ['./anonymous-delete-user.component.scss']
+    selector: 'app-anonymous-delete-user',
+    templateUrl: './anonymous-delete-user.component.html',
+    styleUrls: ['./anonymous-delete-user.component.scss'],
+    standalone: false
 })
 export class AnonymousDeleteUserComponent implements OnInit {
 

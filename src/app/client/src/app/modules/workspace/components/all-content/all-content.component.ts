@@ -17,9 +17,10 @@ import { ContentIDParam } from '../../interfaces/delteparam';
 import { CslFrameworkService } from '../../../public/services/csl-framework/csl-framework.service';
 
 @Component({
-  selector: 'app-all-content',
-  templateUrl: './all-content.component.html',
-  styleUrls: ['./all-content.component.scss']
+    selector: 'app-all-content',
+    templateUrl: './all-content.component.html',
+    styleUrls: ['./all-content.component.scss'],
+    standalone: false
 })
 
 export class AllContentComponent extends WorkSpace implements OnInit, AfterViewInit {

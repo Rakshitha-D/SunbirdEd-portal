@@ -11,9 +11,10 @@ import { cloneDeep, toLower, find, random, groupBy, reduce } from 'lodash-es';
 
 declare var L;
 @Component({
-  selector: 'app-map',
-  templateUrl: './map.component.html',
-  styleUrls: ['./map.component.scss']
+    selector: 'app-map',
+    templateUrl: './map.component.html',
+    styleUrls: ['./map.component.scss'],
+    standalone: false
 })
 export class MapComponent implements OnInit, AfterViewInit {
   public mapId;

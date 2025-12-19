@@ -4,9 +4,10 @@ import * as _ from 'lodash-es';
 import { IInteractEventObject, IInteractEventEdata } from '@sunbird/telemetry';
 
 @Component({
-  selector: 'app-credits-and-licence',
-  templateUrl: './credits-and-licence.component.html',
-  styleUrls: ['./credits-and-licence.component.scss']
+    selector: 'app-credits-and-licence',
+    templateUrl: './credits-and-licence.component.html',
+    styleUrls: ['./credits-and-licence.component.scss'],
+    standalone: false
 })
 export class CreditsAndLicenceComponent implements OnInit {
 

@@ -15,8 +15,9 @@ import { CslFrameworkService } from '../../../public/services/csl-framework/csl-
 
 
 @Component({
-  selector: 'app-view-all',
-  templateUrl: './view-all.component.html'
+    selector: 'app-view-all',
+    templateUrl: './view-all.component.html',
+    standalone: false
 })
 export class ViewAllComponent implements OnInit, OnDestroy, AfterViewInit {
   /**

@@ -7,7 +7,8 @@ import * as _ from 'lodash-es';
 @Component({
     selector: 'app-year-of-birth',
     templateUrl: './year-of-birth.component.html',
-    styleUrls: ['./year-of-birth.component.scss']
+    styleUrls: ['./year-of-birth.component.scss'],
+    standalone: false
 })
 export class YearOfBirthComponent implements OnInit {
     selectedYearOfBirth: number;

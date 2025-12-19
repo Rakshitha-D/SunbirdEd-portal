@@ -9,9 +9,10 @@ import { PopupControlService } from '../../../../service/popup-control.service';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-tnc-popup',
-  templateUrl: './terms-conditions-popup.component.html',
-  styleUrls: ['./terms-conditions-popup.component.scss']
+    selector: 'app-tnc-popup',
+    templateUrl: './terms-conditions-popup.component.html',
+    styleUrls: ['./terms-conditions-popup.component.scss'],
+    standalone: false
 })
 
 export class TermsAndConditionsPopupComponent implements OnInit, OnDestroy {

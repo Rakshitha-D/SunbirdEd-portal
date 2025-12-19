@@ -6,9 +6,10 @@ import * as _ from 'lodash-es';
 import { debounceTime, distinctUntilChanged, delay, flatMap } from 'rxjs/operators';
 import { IInteractEventEdata } from '@sunbird/telemetry';
 @Component({
-  selector: 'app-up-for-review-filter',
-  templateUrl: './up-for-review-filter.component.html',
-  styleUrls: ['./up-for-review-filter.component.scss']
+    selector: 'app-up-for-review-filter',
+    templateUrl: './up-for-review-filter.component.html',
+    styleUrls: ['./up-for-review-filter.component.scss'],
+    standalone: false
 })
 export class UpforReviewFilterComponent implements OnInit {
   modelChanged: Subject<string> = new Subject<string>();

@@ -8,9 +8,10 @@ import { TelemetryService } from '@sunbird/telemetry';
 import { timer, Subject, combineLatest } from 'rxjs';
 import { switchMap, filter, takeUntil, tap} from 'rxjs/operators';
 @Component({
-  selector: 'app-telemetry-import',
-  templateUrl: './telemetry-import.component.html',
-  styleUrls: ['./telemetry-import.component.scss']
+    selector: 'app-telemetry-import',
+    templateUrl: './telemetry-import.component.html',
+    styleUrls: ['./telemetry-import.component.scss'],
+    standalone: false
 })
 export class TelemetryImportComponent implements OnInit, OnDestroy {
   importFilesList = [];

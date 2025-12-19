@@ -11,9 +11,10 @@ import { Subject } from 'rxjs';
 import { ConnectionService } from '../../../shared/services/connection-service/connection.service';
 
 @Component({
-  selector: 'app-in-app-notification',
-  templateUrl: './in-app-notification.component.html',
-  styleUrls: ['./in-app-notification.component.scss']
+    selector: 'app-in-app-notification',
+    templateUrl: './in-app-notification.component.html',
+    styleUrls: ['./in-app-notification.component.scss'],
+    standalone: false
 })
 export class InAppNotificationComponent implements OnInit, OnDestroy {
 

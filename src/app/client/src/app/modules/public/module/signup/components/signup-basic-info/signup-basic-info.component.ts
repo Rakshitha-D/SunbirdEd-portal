@@ -8,9 +8,10 @@ import { map, startWith } from 'rxjs/operators';
 import * as _ from 'lodash-es';
 
 @Component({
-  selector: 'app-signup-basic-info',
-  templateUrl: './signup-basic-info.component.html',
-  styleUrls: ['./signup-basic-info.component.scss' , '../signup/signup_form.component.scss']
+    selector: 'app-signup-basic-info',
+    templateUrl: './signup-basic-info.component.html',
+    styleUrls: ['./signup-basic-info.component.scss', '../signup/signup_form.component.scss'],
+    standalone: false
 })
 export class SignupBasicInfoComponent implements OnInit {
 

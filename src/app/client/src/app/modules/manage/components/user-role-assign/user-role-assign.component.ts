@@ -6,9 +6,10 @@ import { ToasterService, ResourceService, ServerResponse,ConfigService } from '@
 import { ManageService } from '../../services/manage/manage.service';
 import * as _ from 'lodash-es';
 @Component({
-  selector: 'app-user-role-assign',
-  templateUrl: './user-role-assign.component.html',
-  styleUrls: ['./user-role-assign.component.scss']
+    selector: 'app-user-role-assign',
+    templateUrl: './user-role-assign.component.html',
+    styleUrls: ['./user-role-assign.component.scss'],
+    standalone: false
 })
 export class UserRoleAssignComponent implements OnInit {
   userDetailsForm: UntypedFormGroup;

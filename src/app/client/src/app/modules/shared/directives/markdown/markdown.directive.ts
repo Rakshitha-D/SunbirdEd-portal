@@ -2,7 +2,8 @@ import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 import * as marked from 'marked';
 
 @Directive({
-  selector: '[appMarkdown]'
+    selector: '[appMarkdown]',
+    standalone: false
 })
 export class MarkdownDirective implements OnChanges {
 

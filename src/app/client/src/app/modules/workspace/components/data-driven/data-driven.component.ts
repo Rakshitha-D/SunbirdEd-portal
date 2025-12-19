@@ -18,9 +18,10 @@ import { takeUntil} from 'rxjs/operators';
 import { v4 as UUID } from 'uuid';
 
 @Component({
-  selector: 'app-data-driven',
-  templateUrl: './data-driven.component.html',
-  styleUrls: ['./data-driven.component.scss']
+    selector: 'app-data-driven',
+    templateUrl: './data-driven.component.html',
+    styleUrls: ['./data-driven.component.scss'],
+    standalone: false
 })
 export class DataDrivenComponent extends WorkSpace implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('formData') formData: DefaultTemplateComponent;

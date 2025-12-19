@@ -21,7 +21,7 @@ import { CommonConsumptionModule } from '@project-sunbird/common-consumption';
 import { ContentTypeComponent } from './components/content-type/content-type.component';
 import { LocationModule } from '../../plugins/location/location.module';
 import { NotificationModule } from '../notification/notification.module';
-import { TelemetryErrorModalComponent } from '../shared/components/telemetry-error-modal/telemetry-error-modal.component';
+
 import { CslFrameworkService } from '../public/services/csl-framework/csl-framework.service';
 @NgModule({
   imports: [
@@ -37,13 +37,13 @@ import { CslFrameworkService } from '../public/services/csl-framework/csl-framew
     CommonConsumptionModule,
     LocationModule,
     NotificationModule,
-    
+
   ],
   declarations: [MainHeaderComponent, MainFooterComponent, MainMenuComponent, SearchComponent, PermissionDirective,
     BodyScrollDirective, OnlineOnlyDirective,
-    ErrorPageComponent, LanguageDropdownComponent, ContentTypeComponent, DesktopOnlyDirective, TelemetryErrorModalComponent],
+    ErrorPageComponent, LanguageDropdownComponent, ContentTypeComponent, DesktopOnlyDirective],
   exports: [MainHeaderComponent, MainFooterComponent, PermissionDirective, BodyScrollDirective, OnlineOnlyDirective,
-    TelemetryModule, LanguageDropdownComponent, DesktopOnlyDirective, TelemetryErrorModalComponent],
+    TelemetryModule, LanguageDropdownComponent, DesktopOnlyDirective],
   providers: [CacheService, AuthGuard, CslFrameworkService, {
     provide: APP_BASE_HREF,
     useFactory: (s: PlatformLocation) => s.getBaseHrefFromDOM(),

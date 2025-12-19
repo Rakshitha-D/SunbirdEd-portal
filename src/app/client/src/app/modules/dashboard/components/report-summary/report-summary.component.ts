@@ -9,9 +9,10 @@ interface ReportSummary {
 }
 
 @Component({
-  selector: 'app-report-summary',
-  templateUrl: './report-summary.component.html',
-  styleUrls: ['./report-summary.component.scss']
+    selector: 'app-report-summary',
+    templateUrl: './report-summary.component.html',
+    styleUrls: ['./report-summary.component.scss'],
+    standalone: false
 })
 export class ReportSummaryComponent implements OnInit {
 

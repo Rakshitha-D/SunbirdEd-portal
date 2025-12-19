@@ -6,9 +6,10 @@ import { CacheService } from '../../../shared/services/cache-service/cache.servi
 import * as _ from 'lodash-es';
 
 @Component({
-  selector: 'app-language-dropdown',
-  templateUrl: './language-dropdown.component.html',
-  styleUrls: ['./language-dropdown.component.scss']
+    selector: 'app-language-dropdown',
+    templateUrl: './language-dropdown.component.html',
+    styleUrls: ['./language-dropdown.component.scss'],
+    standalone: false
 })
 export class LanguageDropdownComponent implements OnInit {
   @Input() redirectUrl: string;

@@ -23,8 +23,9 @@ enum state {
  * Component Launches the collection Editor in a IFrame Modal
  */
 @Component({
-  selector: 'app-collection-editor',
-  templateUrl: './collection-editor.component.html'
+    selector: 'app-collection-editor',
+    templateUrl: './collection-editor.component.html',
+    standalone: false
 })
 export class CollectionEditorComponent implements OnInit, OnDestroy {
 

@@ -3,9 +3,10 @@ import { ResourceService } from '@sunbird/shared';
 import * as _ from 'lodash-es';
 
 @Component({
-  selector: 'app-course-info',
-  templateUrl: './course-info.component.html',
-  styleUrls: ['./course-info.component.scss']
+    selector: 'app-course-info',
+    templateUrl: './course-info.component.html',
+    styleUrls: ['./course-info.component.scss'],
+    standalone: false
 })
 export class CourseInfoComponent implements OnInit {
 

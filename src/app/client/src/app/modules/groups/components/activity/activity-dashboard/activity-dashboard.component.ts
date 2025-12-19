@@ -6,9 +6,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { MY_GROUPS, GROUP_DETAILS } from '../../../interfaces/routerLinks';
 
 @Component({
-  selector: 'app-activity-dashboard',
-  templateUrl: './activity-dashboard.component.html',
-  styleUrls: ['./activity-dashboard.component.scss']
+    selector: 'app-activity-dashboard',
+    templateUrl: './activity-dashboard.component.html',
+    styleUrls: ['./activity-dashboard.component.scss'],
+    standalone: false
 })
 export class ActivityDashboardComponent implements OnInit {
 

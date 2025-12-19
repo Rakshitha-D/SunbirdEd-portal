@@ -6,7 +6,8 @@ import { TelemetryService } from '../../services';
  * TelemetryInteract Directive
  */
 @Directive({
-  selector: '[appTelemetryImpression]'
+    selector: '[appTelemetryImpression]',
+    standalone: false
 })
 export class TelemetryImpressionDirective implements OnInit, OnDestroy, OnChanges {
   /**

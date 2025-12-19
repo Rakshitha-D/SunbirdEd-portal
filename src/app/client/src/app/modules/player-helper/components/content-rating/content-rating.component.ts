@@ -7,9 +7,10 @@ import { ActivatedRoute } from '@angular/router';
 import { FormService } from '@sunbird/core';
 import * as _ from 'lodash-es';
 @Component({
-  selector: 'app-content-rating',
-  templateUrl: './content-rating.component.html',
-  styleUrls: ['./content-rating.component.scss']
+    selector: 'app-content-rating',
+    templateUrl: './content-rating.component.html',
+    styleUrls: ['./content-rating.component.scss'],
+    standalone: false
 })
 export class ContentRatingComponent implements OnInit, OnDestroy {
   /**

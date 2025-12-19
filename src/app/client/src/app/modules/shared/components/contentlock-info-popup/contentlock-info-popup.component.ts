@@ -2,8 +2,9 @@ import { Component, OnInit, ViewChild, Input, EventEmitter, Output } from '@angu
 import { ResourceService } from '../../services/index';
 
 @Component({
-  selector: 'app-contentlock-info-popup',
-  templateUrl: './contentlock-info-popup.component.html'
+    selector: 'app-contentlock-info-popup',
+    templateUrl: './contentlock-info-popup.component.html',
+    standalone: false
 })
 
 export class LockInfoPopupComponent implements OnInit {

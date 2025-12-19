@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SuiModule } from '@project-sunbird/ng2-semantic-ui';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ResourceService, ToasterService, SharedModule } from '@sunbird/shared';
 import { programDashboardRoutingModule } from './program-dashboard-routing.module';
 import { TelemetryModule } from '@sunbird/telemetry';
@@ -40,54 +40,48 @@ const TIME_RANGE_DATE_FORMAT = {
     monthYearA11yLabel: 'MMM YYYY',
   },
 };
-@NgModule({
-  declarations: [
-  DatasetsComponent,
-  BigDataPipe,
-  ChartTypePipe,
-  SbChartComponent,
-  FilterChartPipe,
-  SbBignumberComponent,
-  SbTableComponent,
-  PdFiltersComponent,
-  DateValidatorDirective
-  ],
-  imports: [
-    CommonModule,
-    SharedModule,
-    SharedFeatureModule,
-    SuiModule,
-    HttpClientModule,
-    TelemetryModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    programDashboardRoutingModule,
-    MatCheckboxModule,
-    MatTabsModule,
-    MatSlideToggleModule,
-    MatExpansionModule,
-    MatAutocompleteModule,
-    DashletModule,
-    DashboardSharedModule,
-    MatDatepickerModule,
-    MatNativeDateModule
-  ],
-  providers: [
-    ResourceService,
-    ToasterService,
-    BigDataPipe,
-    ChartTypePipe,
-    FilterChartPipe,
-      {
-        provide: DateAdapter,
-        useClass: MomentDateAdapter,
-        deps: [MAT_DATE_LOCALE],
-      },
-      { provide: MAT_DATE_FORMATS, useValue: TIME_RANGE_DATE_FORMAT},
-  ]
-})
+@NgModule({ declarations: [
+        DatasetsComponent,
+        BigDataPipe,
+        ChartTypePipe,
+        SbChartComponent,
+        FilterChartPipe,
+        SbBignumberComponent,
+        SbTableComponent,
+        PdFiltersComponent,
+        DateValidatorDirective
+    ], imports: [CommonModule,
+        SharedModule,
+        SharedFeatureModule,
+        SuiModule,
+        TelemetryModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        programDashboardRoutingModule,
+        MatCheckboxModule,
+        MatTabsModule,
+        MatSlideToggleModule,
+        MatExpansionModule,
+        MatAutocompleteModule,
+        DashletModule,
+        DashboardSharedModule,
+        MatDatepickerModule,
+        MatNativeDateModule], providers: [
+        ResourceService,
+        ToasterService,
+        BigDataPipe,
+        ChartTypePipe,
+        FilterChartPipe,
+        {
+            provide: DateAdapter,
+            useClass: MomentDateAdapter,
+            deps: [MAT_DATE_LOCALE],
+        },
+        { provide: MAT_DATE_FORMATS, useValue: TIME_RANGE_DATE_FORMAT },
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 export class programDashboardModule {
 
 }

@@ -11,7 +11,8 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 @Component({
   selector: 'app-delete-user',
   templateUrl: './delete-user.component.html',
-  styleUrls: ['./delete-user.component.scss']
+  styleUrls: ['./delete-user.component.scss'],
+  standalone: false
 })
 export class DeleteUserComponent implements OnInit {
 
@@ -30,7 +31,7 @@ export class DeleteUserComponent implements OnInit {
   userProfile: any;
   deepLink;
   skipOtpVerification = false;
-  
+
   constructor(public resourceService: ResourceService, public toasterService: ToasterService, public router: Router,
     public userService: UserService, public configService: ConfigService, public orgDetailsService: OrgDetailsService,
     private activatedRoute: ActivatedRoute, public navigationhelperService: NavigationHelperService,
@@ -49,8 +50,8 @@ export class DeleteUserComponent implements OnInit {
     this.setTelemetryData();
     this.checkOtpVerificationSetting();
     if (_.get(this.activatedRoute, 'snapshot.queryParams.deeplink')) {
-      this.deepLink =_.get(this.activatedRoute, 'snapshot.queryParams.deeplink')
-    } 
+      this.deepLink = _.get(this.activatedRoute, 'snapshot.queryParams.deeplink')
+    }
     this.layoutConfiguration = this.layoutService.initlayoutConfig();
     this.layoutService.switchableLayout().
       pipe(takeUntil(this.unsubscribe)).subscribe(layoutConfig => {
@@ -98,18 +99,18 @@ export class DeleteUserComponent implements OnInit {
   onSubmitForm() {
     if (this.enableSubmitBtn) {
       this.enableSubmitBtn = false;
-      
+
       if (this.skipOtpVerification) {
         this.verificationSuccess();
         return;
       }
-      
+
       this.showContactPopup = true;
       this.conditions = []
       this.inputFields.forEach((element) => {
         element.nativeElement.checked = false;
       });
-    }else{
+    } else {
       this.toasterService.warning(this.resourceService.messages.imsg.m0092)
     }
   }
@@ -123,11 +124,11 @@ export class DeleteUserComponent implements OnInit {
       this.skipOtpVerification = false;
       return;
     }
-    
+
     const systemSetting = {
       url: verifyOtpOnDeleteUrl,
     };
-    
+
     this.orgDetailsService.learnerService.get(systemSetting).subscribe(response => {
       if (_.get(response, 'result.response.value') === 'false') {
         this.skipOtpVerification = true;
@@ -144,20 +145,20 @@ export class DeleteUserComponent implements OnInit {
    */
   verificationSuccess() {
     this.userService.deleteUser().subscribe(data => {
-        if(_.get(data, 'result.response') === 'SUCCESS'){
-          this.toasterService.success("Your account is deleted successfully");
-          if(this.deviceDetectorService.isMobile() && this.deepLink !== ''){
-            //TODO changes need to be done on the Mobile Deeplink
-            const url = this.deepLink+'?userId='+ this.userProfile.userId;
-            window.open(url, '_blank');
-          }
-          window.location.replace('/logoff');
-          this.cacheService.removeAll();
+      if (_.get(data, 'result.response') === 'SUCCESS') {
+        this.toasterService.success("Your account is deleted successfully");
+        if (this.deviceDetectorService.isMobile() && this.deepLink !== '') {
+          //TODO changes need to be done on the Mobile Deeplink
+          const url = this.deepLink + '?userId=' + this.userProfile.userId;
+          window.open(url, '_blank');
         }
-      },
+        window.location.replace('/logoff');
+        this.cacheService.removeAll();
+      }
+    },
       (err) => {
         //TODO we need to update the error 
-        const errorMessage =  this.resourceService.messages.fmsg.m0085;
+        const errorMessage = this.resourceService.messages.fmsg.m0085;
         this.toasterService.error(errorMessage);
       }
     );
@@ -174,7 +175,7 @@ export class DeleteUserComponent implements OnInit {
       this.enableSubmitBtn = false;
     }
   }
-  
+
   /**
    * This method pushes all the checked conditions into an array
    */

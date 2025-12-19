@@ -7,9 +7,10 @@ import { ResourceService } from '../../services/index';
 * This display a batch card
 */
 @Component({
-  selector: 'app-batch-card',
-  templateUrl: './batch-card.component.html',
-  styleUrls: ['./batch-card.component.scss']
+    selector: 'app-batch-card',
+    templateUrl: './batch-card.component.html',
+    styleUrls: ['./batch-card.component.scss'],
+    standalone: false
 })
 export class BatchCardComponent {
   /**

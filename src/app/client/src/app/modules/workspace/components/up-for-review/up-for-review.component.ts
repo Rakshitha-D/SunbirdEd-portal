@@ -20,8 +20,9 @@ import { CslFrameworkService } from '../../../public/services/csl-framework/csl-
 */
 
 @Component({
-  selector: 'app-up-for-review',
-  templateUrl: './up-for-review.component.html'
+    selector: 'app-up-for-review',
+    templateUrl: './up-for-review.component.html',
+    standalone: false
 })
 export class UpForReviewComponent extends WorkSpace implements OnInit, AfterViewInit {
   /**

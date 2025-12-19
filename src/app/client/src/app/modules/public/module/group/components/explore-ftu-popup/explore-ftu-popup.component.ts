@@ -5,9 +5,10 @@ import { ActivatedRoute } from '@angular/router';
 import * as _ from 'lodash-es';
 
 @Component({
-  selector: 'app-explore-ftu-popup',
-  templateUrl: './explore-ftu-popup.component.html',
-  styleUrls: ['./explore-ftu-popup.component.scss']
+    selector: 'app-explore-ftu-popup',
+    templateUrl: './explore-ftu-popup.component.html',
+    styleUrls: ['./explore-ftu-popup.component.scss'],
+    standalone: false
 })
 export class ExploreFtuPopupComponent {
   @Output() close = new EventEmitter();

@@ -12,9 +12,10 @@ import { POPUP_LOADED, CREATE_GROUP, SELECT_CLOSE, CLOSE_ICON, SELECT_RESET } fr
 import { UtilService } from '../../../shared/services/util/util.service';
 import { MatDialog } from '@angular/material/dialog';
 @Component({
-  selector: 'app-create-edit-group',
-  templateUrl: './create-edit-group.component.html',
-  styleUrls: ['./create-edit-group.component.scss']
+    selector: 'app-create-edit-group',
+    templateUrl: './create-edit-group.component.html',
+    styleUrls: ['./create-edit-group.component.scss'],
+    standalone: false
 })
 export class CreateEditGroupComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('createGroupModal') createGroupModal;

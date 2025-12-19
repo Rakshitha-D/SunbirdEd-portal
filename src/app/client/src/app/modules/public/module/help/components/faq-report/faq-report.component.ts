@@ -8,9 +8,10 @@ import { TelemetryService } from '@sunbird/telemetry';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-faq-report',
-  templateUrl: './faq-report.component.html',
-  styleUrls: ['./faq-report.component.scss']
+    selector: 'app-faq-report',
+    templateUrl: './faq-report.component.html',
+    styleUrls: ['./faq-report.component.scss'],
+    standalone: false
 })
 export class FaqReportComponent implements OnInit {
 

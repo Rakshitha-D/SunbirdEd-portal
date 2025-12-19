@@ -7,9 +7,10 @@ import { debounceTime, distinctUntilChanged, delay, flatMap } from 'rxjs/operato
 import { IInteractEventEdata } from '@sunbird/telemetry';
 
 @Component({
-  selector: 'app-workspace-content-filter',
-  templateUrl: './workspace-content-filter.component.html',
-  styleUrls: ['./workspace-content-filter.component.scss']
+    selector: 'app-workspace-content-filter',
+    templateUrl: './workspace-content-filter.component.html',
+    styleUrls: ['./workspace-content-filter.component.scss'],
+    standalone: false
 })
 export class WorkspaceContentFilterComponent implements OnInit {
   modelChanged: Subject<string> = new Subject<string>();

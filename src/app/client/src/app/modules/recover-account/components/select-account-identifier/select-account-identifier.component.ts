@@ -7,8 +7,9 @@ import { IImpressionEventInput } from '@sunbird/telemetry';
 import { RecaptchaComponent } from 'ng-recaptcha';
 
 @Component({
-  templateUrl: './select-account-identifier.component.html',
-  styleUrls: ['./select-account-identifier.component.scss']
+    templateUrl: './select-account-identifier.component.html',
+    styleUrls: ['./select-account-identifier.component.scss'],
+    standalone: false
 })
 export class SelectAccountIdentifierComponent implements OnInit {
   @ViewChild('captchaRef') captchaRef: RecaptchaComponent;

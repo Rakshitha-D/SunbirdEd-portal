@@ -5,9 +5,10 @@ import { IPopup } from '@project-sunbird/ng2-semantic-ui';
 import { ITelemetryShare } from './../../interfaces';
 import { ActivatedRoute } from '@angular/router';
 @Component({
-  selector: 'app-share-link',
-  templateUrl: './share-link.component.html',
-  styleUrls: ['./share-link.component.scss']
+    selector: 'app-share-link',
+    templateUrl: './share-link.component.html',
+    styleUrls: ['./share-link.component.scss'],
+    standalone: false
 })
 export class ShareLinkComponent implements OnInit {
   /**

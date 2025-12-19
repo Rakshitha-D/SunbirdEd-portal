@@ -15,9 +15,10 @@ export interface IMemberActionData {
 }
 
 @Component({
-  selector: 'app-member-actions',
-  templateUrl: './member-actions.component.html',
-  styleUrls: ['./member-actions.component.scss']
+    selector: 'app-member-actions',
+    templateUrl: './member-actions.component.html',
+    styleUrls: ['./member-actions.component.scss'],
+    standalone: false
 })
 export class MemberActionsComponent implements OnDestroy, OnInit {
   @ViewChild('modal') modal;

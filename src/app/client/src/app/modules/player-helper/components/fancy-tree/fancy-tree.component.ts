@@ -12,8 +12,9 @@ declare global {
 }
 
 @Component({
-  selector: 'app-fancy-tree',
-  templateUrl: './fancy-tree.component.html'
+    selector: 'app-fancy-tree',
+    templateUrl: './fancy-tree.component.html',
+    standalone: false
 })
 export class FancyTreeComponent implements AfterViewInit {
   // Constants for magic numbers
